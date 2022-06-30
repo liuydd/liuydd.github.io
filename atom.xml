@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>等到天亮我们都寻找到最漂亮的愿望</title>
   
-  <subtitle>我甚至觉得自己是故事的一部分，虽然在现实中我只是个平凡的过客</subtitle>
+  <subtitle>Sheeta Liu&#39;s Paradise Regained </subtitle>
   <link href="http://liuydd.github.io/atom.xml" rel="self"/>
   
   <link href="http://liuydd.github.io/"/>
-  <updated>2022-06-30T03:54:07.619Z</updated>
+  <updated>2022-06-30T05:32:33.636Z</updated>
   <id>http://liuydd.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cs61a：从入门到如土</title>
+    <link href="http://liuydd.github.io/2022/06/30/cs61a/"/>
+    <id>http://liuydd.github.io/2022/06/30/cs61a/</id>
+    <published>2022-06-30T04:14:05.000Z</published>
+    <updated>2022-06-30T05:32:33.636Z</updated>
+    
+    
+    <summary type="html">不愧是梦开始的地方...</summary>
+    
+    
+    
+    <category term="cs" scheme="http://liuydd.github.io/categories/cs/"/>
+    
+    
+    <category term="cs, python" scheme="http://liuydd.github.io/tags/cs-python/"/>
+    
+  </entry>
   
   <entry>
     <title>行水问路·大一学年总结</title>

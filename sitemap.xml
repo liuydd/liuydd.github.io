@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://liuydd.github.io/2022/06/30/cs61a/</loc>
+    
+    <lastmod>2022-06-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://liuydd.github.io/2022/06/30/a/</loc>
     
     <lastmod>2022-06-30</lastmod>
@@ -20,6 +29,13 @@
 
   
   <url>
+    <loc>http://liuydd.github.io/tags/cs-python/</loc>
+    <lastmod>2022-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://liuydd.github.io/tags/%E6%80%BB%E7%BB%93-%E5%A4%A7%E4%B8%80-%E9%80%83%E7%A6%BB/</loc>
     <lastmod>2022-06-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -27,6 +43,13 @@
   </url>
   
 
+  
+  <url>
+    <loc>http://liuydd.github.io/categories/cs/</loc>
+    <lastmod>2022-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>http://liuydd.github.io/categories/%E8%BF%87%E5%BE%80%E4%BA%91%E7%83%9F/</loc>
