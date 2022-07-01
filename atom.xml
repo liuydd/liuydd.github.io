@@ -6,7 +6,7 @@
   <link href="http://liuydd.github.io/atom.xml" rel="self"/>
   
   <link href="http://liuydd.github.io/"/>
-  <updated>2022-07-01T05:36:00.817Z</updated>
+  <updated>2022-07-01T15:55:10.983Z</updated>
   <id>http://liuydd.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>种星星的人</title>
+    <link href="http://liuydd.github.io/2022/07/01/stars/"/>
+    <id>http://liuydd.github.io/2022/07/01/stars/</id>
+    <published>2022-07-01T15:35:08.000Z</published>
+    <updated>2022-07-01T15:55:10.983Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Readme"><a href="#Readme" class="headerlink" title="Readme"></a>Readme</h2><p>与二三好友于2022年7月1日夜共同观影《人生大事》，中有一友为二刷。</p><p>有感而作此文。</p>]]></content>
+    
+    
+    <summary type="html">死生亦大矣</summary>
+    
+    
+    
+    <category term="观影杂记" scheme="http://liuydd.github.io/categories/%E8%A7%82%E5%BD%B1%E6%9D%82%E8%AE%B0/"/>
+    
+    
+    <category term="观影" scheme="http://liuydd.github.io/tags/%E8%A7%82%E5%BD%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>cs61a：从入门到入土</title>
