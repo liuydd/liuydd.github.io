@@ -1,9 +1,9 @@
 http://liuydd.github.io/link/index.html
+http://liuydd.github.io/about/index.html
 http://liuydd.github.io/2022/07/06/shumo/
 http://liuydd.github.io/2022/06/30/cs61a/
 http://liuydd.github.io/2022/07/01/stars/
 http://liuydd.github.io/2022/07/02/cs61aa/
-http://liuydd.github.io/about/index.html
 http://liuydd.github.io/categories/index.html
 http://liuydd.github.io/2022/06/30/a/
 http://liuydd.github.io/
