@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://liuydd.github.io/2022/12/05/eecs/</loc>
+    <loc>http://liuydd.github.io/2022/09/12/moyu2/</loc>
     
     <lastmod>2022-12-05</lastmod>
     
@@ -11,9 +11,18 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/2022/09/12/moyu2/</loc>
+    <loc>http://liuydd.github.io/2022/10/30/pytorch/</loc>
     
-    <lastmod>2022-12-04</lastmod>
+    <lastmod>2022-12-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://liuydd.github.io/2022/12/05/eecs/</loc>
+    
+    <lastmod>2022-12-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -160,6 +169,13 @@
   </url>
   
   <url>
+    <loc>http://liuydd.github.io/tags/diary/</loc>
+    <lastmod>2022-12-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://liuydd.github.io/tags/cs-python/</loc>
     <lastmod>2022-12-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -174,14 +190,14 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/diary/</loc>
+    <loc>http://liuydd.github.io/tags/%E6%95%B0%E6%A8%A1/</loc>
     <lastmod>2022-12-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/%E6%95%B0%E6%A8%A1/</loc>
+    <loc>http://liuydd.github.io/tags/cs-PyTorch/</loc>
     <lastmod>2022-12-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -195,14 +211,14 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/cs-base-c/</loc>
+    <loc>http://liuydd.github.io/tags/connection/</loc>
     <lastmod>2022-12-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/connection/</loc>
+    <loc>http://liuydd.github.io/tags/cs-base-c/</loc>
     <lastmod>2022-12-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -225,13 +241,6 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/categories/info/</loc>
-    <lastmod>2022-12-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://liuydd.github.io/categories/%E6%B5%AE%E5%85%89%E6%8E%A0%E5%BD%B1/</loc>
     <lastmod>2022-12-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -239,7 +248,21 @@
   </url>
   
   <url>
+    <loc>http://liuydd.github.io/categories/info/</loc>
+    <lastmod>2022-12-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://liuydd.github.io/categories/%E7%90%86%E6%83%B3%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2022-12-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://liuydd.github.io/categories/NLP/</loc>
     <lastmod>2022-12-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
