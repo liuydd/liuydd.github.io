@@ -212,14 +212,14 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/diary/</loc>
+    <loc>http://liuydd.github.io/tags/%E4%BF%A1%E6%81%AF%E5%B7%AE-%E9%80%83%E7%A6%BB/</loc>
     <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/%E4%BF%A1%E6%81%AF%E5%B7%AE-%E9%80%83%E7%A6%BB/</loc>
+    <loc>http://liuydd.github.io/tags/diary/</loc>
     <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -284,14 +284,14 @@
 
   
   <url>
-    <loc>http://liuydd.github.io/categories/NLP/</loc>
+    <loc>http://liuydd.github.io/categories/cs/</loc>
     <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/categories/cs/</loc>
+    <loc>http://liuydd.github.io/categories/NLP/</loc>
     <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -305,14 +305,14 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/categories/%E6%B5%AE%E5%85%89%E6%8E%A0%E5%BD%B1/</loc>
+    <loc>http://liuydd.github.io/categories/info/</loc>
     <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/categories/info/</loc>
+    <loc>http://liuydd.github.io/categories/%E6%B5%AE%E5%85%89%E6%8E%A0%E5%BD%B1/</loc>
     <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
