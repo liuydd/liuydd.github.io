@@ -1,0 +1,326 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Import numpy as npy | 等到天亮我们都寻找到最漂亮的愿望</title><meta name="keywords" content="cs, numpy"><meta name="author" content="Sheeta Liu"><meta name="copyright" content="Sheeta Liu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="感觉学习numpy还是需要练习实战...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Import numpy as npy">
+<meta property="og:url" content="http://liuydd.github.io/2023/03/01/numpy/index.html">
+<meta property="og:site_name" content="等到天亮我们都寻找到最漂亮的愿望">
+<meta property="og:description" content="感觉学习numpy还是需要练习实战...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://liuydd.github.io/images/cover16.jpg">
+<meta property="article:published_time" content="2023-03-01T02:09:22.000Z">
+<meta property="article:modified_time" content="2023-03-31T02:31:03.823Z">
+<meta property="article:author" content="Sheeta Liu">
+<meta property="article:tag" content="cs, numpy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://liuydd.github.io/images/cover16.jpg"><link rel="shortcut icon" href="../../../../img/tubiao.jpg"><link rel="canonical" href="http://liuydd.github.io/2023/03/01/numpy/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="../../../../css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Import numpy as npy',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-31 10:31:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3870185_ugzi44wm6l.css"><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="atom.xml" title="等到天亮我们都寻找到最漂亮的愿望" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="../img/touxiang2.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="../tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="../categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.html"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="../html/Site/Resume.html"><i class="fa-fw icon-shanguangdengdakai"></i><span> Resume</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('../../../../images/cover16.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="../index.html">等到天亮我们都寻找到最漂亮的愿望</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.html"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="../html/Site/Resume.html"><i class="fa-fw icon-shanguangdengdakai"></i><span> Resume</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Import numpy as npy</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-01T02:09:22.000Z" title="发表于 2023-03-01 10:09:22">2023-03-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-31T02:31:03.823Z" title="更新于 2023-03-31 10:31:03">2023-03-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="../../../../categories/cs/">cs</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Import numpy as npy"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Readme"><a href="#Readme" class="headerlink" title="Readme"></a>Readme</h1><p>Python复习：<a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/tutorial/">https://docs.python.org/zh-cn/3/tutorial/</a></p>
+<p>NumPy用户指南：<a target="_blank" rel="noopener" href="https://www.numpy.org.cn/">https://www.numpy.org.cn/</a></p>
+<p>NumPy参考手册：<a target="_blank" rel="noopener" href="https://www.numpy.org.cn/reference/">https://www.numpy.org.cn/reference/</a></p>
+<p>.</p>
+<h1 id="NumPy介绍"><a href="#NumPy介绍" class="headerlink" title="NumPy介绍"></a>NumPy介绍</h1><p>NumPy包的核心是 <em>ndarray</em> 对象，它封装了python原生的同数据类型的 <em>n</em> 维数组。</p>
+<p>NumPy数组与原生的Python Array数组之间的区别：</p>
+<p>NumPy数组数组大小固定，且数组内元素大小一致，执行相关操作效率更高。</p>
+<p><strong>NumPy大部分功能的基础：矢量化和广播</strong></p>
+<p>当涉及到<em>ndarray</em>时，逐个元素的操作是“默认模式”，但逐个元素的操作由预编译的C代码快速执行。</p>
+<p>即使用NumPy，我们兼顾了python的简便写法和C&#x2F;C++的快速</p>
+<ul>
+<li>矢量化：代码中没有任何显式的循环、索引等</li>
+<li>广播（Broadcasting）：用于描述操作的<strong>隐式逐元素</strong>行为的术语，较小的数组可以在较大的数组上广播</li>
+</ul>
+<p>.</p>
+<h1 id="快速入门教程"><a href="#快速入门教程" class="headerlink" title="快速入门教程"></a>快速入门教程</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ul>
+<li><strong>ndarray.ndim</strong> - 数组的轴（维度）的个数。在Python世界中，维度的数量被称为rank<strong>（即ndim的值为矩阵的秩）</strong>。</li>
+<li><strong>ndarray.shape</strong> - 数组的维度。这是一个整数的元组，表示每个维度中数组的大小。对于有 <em>n</em> 行和 <em>m</em> 列的矩阵，<code>shape</code> 将是 <code>(n,m)</code>。因此，<code>shape</code> 元组的长度就是rank或维度的个数 <code>ndim</code>。</li>
+<li><strong>ndarray.size</strong> - 数组元素的总数。这等于 <code>shape</code> 的元素的乘积。</li>
+<li><strong>ndarray.dtype</strong> - 一个描述数组中元素类型的对象。可以使用标准的Python类型创建或指定dtype。另外NumPy提供它自己的类型。例如numpy.int32、numpy.int16和numpy.float64。</li>
+<li><strong>ndarray.itemsize</strong> - 数组中每个元素的字节大小。例如，元素为 <code>float64</code> 类型的数组的 <code>itemsize</code> 为8（&#x3D;64&#x2F;8），而 <code>complex32</code> 类型的数组的 <code>itemsize</code> 为4（&#x3D;32&#x2F;8）。它等于 <code>ndarray.dtype.itemsize</code> 。</li>
+<li><strong>ndarray.data</strong> - 该缓冲区包含数组的实际元素。通常，我们不需要使用此属性，因为我们将使用索引访问数组中的元素。</li>
+</ul>
+<p>.</p>
+<h3 id="数组创建"><a href="#数组创建" class="headerlink" title="数组创建"></a>数组创建</h3><p><img src="/2023/03/01/numpy/1.jpg"></p>
+<p>注意：创建多维数组，不能用<code>a=np.array([1,2],[1,2])</code>，而应该加[]或()，如<code>a=np.array(([1,2],[1,2]))</code>或<code>a=np.array([[1,2],[1,2]])</code></p>
+<p>除此之外，还有：</p>
+<ul>
+<li>zero：创建一个由0组成的数组，如<code>np.zeros((3,4))</code></li>
+<li>ones：创建一个由1组成的数组，如<code>np.ones((2,3,4))</code>（三维）</li>
+<li>empty：创建一个初始内容随机的数组，如<code>np.empty((2,3))</code></li>
+<li>range：创建一个等差增加的数组，如<code>np.arange(10,30,5)</code>或<code>np.arange(0,2,0.3)</code><ul>
+<li>与浮点数一起使用时可使用<code>linspace</code>函数来接收想要的元素数量的函数而不是步长（step）</li>
+</ul>
+</li>
+</ul>
+<p>打印数组时，会将一维数组打印成行，二维数组打印成矩阵，三维数组打印成矩数组表</p>
+<p>如果数组太大而无法打印，NumPy会自动跳过数组的中心部分并仅打印角点，要禁用此行为并强制NumPy打印整个数组，可以使用更改打印选项<code>set_printoptions</code></p>
+<p>.</p>
+<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><p>数组上的算术运算符会应用到元素级别。</p>
+<p>乘积运算符<code>*</code>在NumPy数组中按元素进行运算。矩阵乘积可以使用<code>@</code>运算符（在python&gt; &#x3D; 3.5中）或<code>dot</code>函数或方法执行。</p>
+<p>某些操作（例如<code>+=</code>和 <code>*=</code>）会更直接更改被操作的矩阵数组而不会创建新矩阵数组。</p>
+<p>许多一元操作，例如计算数组中所有元素的总和，都是作为<code>ndarray</code>类的方法实现的：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a=np.random.((<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line">a.<span class="built_in">sum</span>()</span><br><span class="line">a.<span class="built_in">min</span>()</span><br><span class="line">a.<span class="built_in">max</span>()</span><br></pre></td></tr></table></figure>
+
+<p>可以通过指定axis参数沿数组的指定轴应用操作：</p>
+<p><img src="/2023/03/01/numpy/2.jpg"></p>
+<p>.</p>
+<h3 id="通函数"><a href="#通函数" class="headerlink" title="通函数"></a>通函数</h3><p>在NumPy中，一些熟悉的数学函数被称为通函数（ufunc），这些函数在数组上按元素进行运算，产生一个数组作为输出。</p>
+<p>常用的通函数：</p>
+<p><img src="/2023/03/01/numpy/3.jpg"></p>
+<p>.</p>
+<h3 id="索引、切片和迭代"><a href="#索引、切片和迭代" class="headerlink" title="索引、切片和迭代"></a>索引、切片和迭代</h3><p>一维数组同Python操作</p>
+<p>多维数组每个轴可以有一个索引（层层索引）。当提供的索引少于轴的数量时，缺失的索引被认为是完整的切片<code>:</code></p>
+<p><code>b[i]</code> 方括号中的表达式 <code>i</code> 被视为后面紧跟着 <code>:</code> 的多个实例，用于表示剩余轴。NumPy也允许你使用三个点写为 <code>b[i,...]</code>，三个点（ <code>...</code> ）表示产生完整索引元组所需的冒号。</p>
+<p>对多维数组进行迭代是相对于第一个轴完成的。如果想要对数组中的每个元素执行操作，可以使用<code>flat</code>属性：</p>
+<p><img src="/2023/03/01/numpy/4.jpg"></p>
+<p>.</p>
+<h2 id="形状操纵"><a href="#形状操纵" class="headerlink" title="形状操纵"></a>形状操纵</h2><p>一个数组的形状是由每个轴的元素数量决定的。</p>
+<h3 id="改变数组的形状"><a href="#改变数组的形状" class="headerlink" title="改变数组的形状"></a>改变数组的形状</h3><p>可以用各种命令更改数组的形状，以下三个命令都返回一个修改后的数组，但不会改变原始数组：</p>
+<ul>
+<li><code>a.ravel()</code>   #将数组降成一维</li>
+<li><code>a.reshape(6,2)</code></li>
+<li><code>a.T</code>  #转置</li>
+</ul>
+<p>注：<code>a.resize((2,6))</code>会改变原数组的形状</p>
+<p>如果在 reshape 操作中将 size 指定为-1，则会自动计算其他的 size 大小，如<code>a.reshape(3,-1)</code></p>
+<p>.</p>
+<h3 id="将不同数组堆叠在一起"><a href="#将不同数组堆叠在一起" class="headerlink" title="将不同数组堆叠在一起"></a>将不同数组堆叠在一起</h3><p>几个数组可以沿不同的轴堆叠在一起。</p>
+<p>常用函数：</p>
+<p><code>np.vstack((a,b))</code>，<code>np.hstack((a,b))</code>，<code>np.column_stack((a,b))</code>，<code>np.row_stack((a,b))</code>。</p>
+<p>.</p>
+<h3 id="将一个数组拆分成几个较小的数组"><a href="#将一个数组拆分成几个较小的数组" class="headerlink" title="将一个数组拆分成几个较小的数组"></a>将一个数组拆分成几个较小的数组</h3><p>使用函数<code>hsplit</code>，可以沿数组的水平轴拆分数组，如：</p>
+<p><code>np.hsplit(a,3)</code>：Split a into 3</p>
+<p><code>np.hsplit(a,(3,4))</code>：Split a after the third and the fourth column</p>
+<p>.</p>
+<h2 id="拷贝和视图"><a href="#拷贝和视图" class="headerlink" title="拷贝和视图"></a>拷贝和视图</h2><ul>
+<li><p>完全不复制：直接赋值不会复制数组对象或其数据，如<code>b=a</code>，a和b是<strong>同一数组对象的不同名称</strong></p>
+</li>
+<li><p>视图或浅拷贝：用view方法创建一个查看相同数据的<strong>新</strong>数组对象，<strong>与原数组对象共享相同的数据</strong>（即改变其中一个数据，另一个数据也随之改变）。如<code>c=a.view()</code>。</p>
+<ul>
+<li><pre><code class="python">&gt;&gt;&gt;c=a.view()
+&gt;&gt;&gt;c is a
+False
+&gt;&gt;&gt;c.base is a
+True
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 深拷贝：用copy方法生成数组及其数据的完整副本（即**与原数组对象及其数据完全无关**）</span><br><span class="line"></span><br><span class="line">  * ```python</span><br><span class="line">    &gt;&gt;&gt;d=a.copy()</span><br><span class="line">    &gt;&gt;&gt;d is a</span><br><span class="line">    False</span><br><span class="line">    &gt;&gt;&gt;d.base is a</span><br><span class="line">    False</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>有时，如果不再需要原始数组，则应在切片后调用 <code>copy</code>。例如，假设a是一个巨大的中间结果，最终结果b只包含a的一小部分，那么在用切片构造b时应该做一个深拷贝：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = np.arange(<span class="built_in">int</span>(<span class="number">1e8</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = a[:<span class="number">100</span>].copy()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> a  <span class="comment"># the memory of ``a`` can be released.</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<p>.</p>
+<h2 id="Less基础"><a href="#Less基础" class="headerlink" title="Less基础"></a>Less基础</h2><p>广播允许通用功能以有意义的方式处理不具有完全相同形状的输入。</p>
+<p>广播规则：</p>
+<ul>
+<li>如果所有输入数组不具有相同数量的维度，则将“1”重复地预先添加到较小数组的形状，直到所有数组具有相同数量的维度。</li>
+<li>确保沿特定维度的大小为1的数组表现为具有沿该维度具有最大形状的数组的大小。假定数组元素的值沿着“广播”数组的那个维度是相同的。</li>
+</ul>
+<p>.</p>
+<h2 id="花式索引和索引技巧"><a href="#花式索引和索引技巧" class="headerlink" title="花式索引和索引技巧"></a>花式索引和索引技巧</h2><p>NumPy的索引功能比Python更多：整数、切片、索引数组和布尔数组。</p>
+<p>详细见用户指南。</p>
+<p>**ix_()**函数：</p>
+<p>用于组合不同的向量，以便获得每个n-uplet的结果</p>
+<p><strong>使用字符串建立索引</strong>：详见“结构体数组”</p>
+<p>.</p>
+<h2 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h2><p><code>a=np.array([[1.0,2.0],[3.0,4.0]])</code></p>
+<ul>
+<li>a.transpose()：转置</li>
+<li>np.linalg.inv(a)：矩阵求逆</li>
+<li>u&#x3D;np.eye(2)：创建单位阵</li>
+<li>a@a：矩阵的乘积</li>
+<li>np.trace(a)：求迹</li>
+<li>np.linalg.solve(a)：求解多元一次方程</li>
+<li>np.linalg.eig(a)：求特征向量</li>
+</ul>
+<p><strong>更多可参阅numpy文件夹中的linalg.py</strong></p>
+<p>.</p>
+<h2 id="技巧和提示"><a href="#技巧和提示" class="headerlink" title="技巧和提示"></a>技巧和提示</h2><ul>
+<li><p>自动整形：<code>a.shape=2,-1,3</code>，-1 means whatever is needed</p>
+</li>
+<li><p>矢量堆叠：如将同等大小的行向量列表构成数组</p>
+</li>
+<li><p>直方图</p>
+</li>
+</ul>
+<p>.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://liuydd.github.io">Sheeta Liu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://liuydd.github.io/2023/03/01/numpy/">http://liuydd.github.io/2023/03/01/numpy/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://liuydd.github.io" target="_blank">等到天亮我们都寻找到最漂亮的愿望</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../../tags/cs-numpy/">cs, numpy</a></div><div class="post_share"><div class="social-share" data-image="../../../../images/cover16.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="../../../02/19/moyu4/"><img class="next-cover" src="../../../../images/cover33.jpg" onerror="onerror=null;src='../../../../img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Sheetaの摸鱼日记（四）</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="../img/touxiang2.jpg" onerror="this.onerror=null;this.src='../img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Sheeta Liu</div><div class="author-info__description">生活不需要意义，吃点好的，我也爱你</div></div><div class="card-info-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="../tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="../categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/liuydd"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">众生皆苦，唯有自渡...</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Readme"><span class="toc-number">1.</span> <span class="toc-text">Readme</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NumPy%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">NumPy介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">快速入门教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">3.1.</span> <span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%88%9B%E5%BB%BA"><span class="toc-number">3.1.1.</span> <span class="toc-text">数组创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">3.1.2.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E5%87%BD%E6%95%B0"><span class="toc-number">3.1.3.</span> <span class="toc-text">通函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E3%80%81%E5%88%87%E7%89%87%E5%92%8C%E8%BF%AD%E4%BB%A3"><span class="toc-number">3.1.4.</span> <span class="toc-text">索引、切片和迭代</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%A2%E7%8A%B6%E6%93%8D%E7%BA%B5"><span class="toc-number">3.2.</span> <span class="toc-text">形状操纵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B9%E5%8F%98%E6%95%B0%E7%BB%84%E7%9A%84%E5%BD%A2%E7%8A%B6"><span class="toc-number">3.2.1.</span> <span class="toc-text">改变数组的形状</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E4%B8%8D%E5%90%8C%E6%95%B0%E7%BB%84%E5%A0%86%E5%8F%A0%E5%9C%A8%E4%B8%80%E8%B5%B7"><span class="toc-number">3.2.2.</span> <span class="toc-text">将不同数组堆叠在一起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E6%8B%86%E5%88%86%E6%88%90%E5%87%A0%E4%B8%AA%E8%BE%83%E5%B0%8F%E7%9A%84%E6%95%B0%E7%BB%84"><span class="toc-number">3.2.3.</span> <span class="toc-text">将一个数组拆分成几个较小的数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%B7%E8%B4%9D%E5%92%8C%E8%A7%86%E5%9B%BE"><span class="toc-number">3.3.</span> <span class="toc-text">拷贝和视图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Less%E5%9F%BA%E7%A1%80"><span class="toc-number">3.4.</span> <span class="toc-text">Less基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%B1%E5%BC%8F%E7%B4%A2%E5%BC%95%E5%92%8C%E7%B4%A2%E5%BC%95%E6%8A%80%E5%B7%A7"><span class="toc-number">3.5.</span> <span class="toc-text">花式索引和索引技巧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-number">3.6.</span> <span class="toc-text">线性代数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7%E5%92%8C%E6%8F%90%E7%A4%BA"><span class="toc-number">3.7.</span> <span class="toc-text">技巧和提示</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="../2023/03/01/numpy/" title="Import numpy as npy"><img src="../images/cover16.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="Import numpy as npy"/></a><div class="content"><a class="title" href="../2023/03/01/numpy/" title="Import numpy as npy">Import numpy as npy</a><time datetime="2023-03-01T02:09:22.000Z" title="发表于 2023-03-01 10:09:22">2023-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2023/02/19/moyu4/" title="Sheetaの摸鱼日记（四）"><img src="../images/cover33.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="Sheetaの摸鱼日记（四）"/></a><div class="content"><a class="title" href="../2023/02/19/moyu4/" title="Sheetaの摸鱼日记（四）">Sheetaの摸鱼日记（四）</a><time datetime="2023-02-19T14:09:03.000Z" title="发表于 2023-02-19 22:09:03">2023-02-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2023/02/13/yuanlin/" title="游园惊梦·聊赠一枝春"><img src="../images/cover32.JPG" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="游园惊梦·聊赠一枝春"/></a><div class="content"><a class="title" href="../2023/02/13/yuanlin/" title="游园惊梦·聊赠一枝春">游园惊梦·聊赠一枝春</a><time datetime="2023-02-13T15:40:56.000Z" title="发表于 2023-02-13 23:40:56">2023-02-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2023/01/14/paper/" title="NLP前沿论文"><img src="../images/cover28.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="NLP前沿论文"/></a><div class="content"><a class="title" href="../2023/01/14/paper/" title="NLP前沿论文">NLP前沿论文</a><time datetime="2023-01-14T09:19:31.000Z" title="发表于 2023-01-14 17:19:31">2023-01-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2023/01/08/moyu3/" title="Sheetaの摸鱼日记（三）"><img src="../images/cover31.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="Sheetaの摸鱼日记（三）"/></a><div class="content"><a class="title" href="../2023/01/08/moyu3/" title="Sheetaの摸鱼日记（三）">Sheetaの摸鱼日记（三）</a><time datetime="2023-01-08T12:42:47.000Z" title="发表于 2023-01-08 20:42:47">2023-01-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By Sheeta Liu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;" ></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/js/fireworks.js"></script>
+<% } %></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="../../../../js/utils.js"></script><script src="../../../../js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="../../../../js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-lake-alpha-67.vercel.app',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-lake-alpha-67.vercel.app',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"left","width":150,"height":300,"hOffset":20,"vOffset":-90},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.3,"opacityOnHover":0.3,"opacity":0.95},"log":false});</script></body></html>
