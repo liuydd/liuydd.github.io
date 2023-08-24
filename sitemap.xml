@@ -290,13 +290,6 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/%E8%A7%82%E5%BD%B1/</loc>
-    <lastmod>2023-08-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://liuydd.github.io/tags/cs-PyTorch/</loc>
     <lastmod>2023-08-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -304,7 +297,7 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/cs-transformers/</loc>
+    <loc>http://liuydd.github.io/tags/%E8%A7%82%E5%BD%B1/</loc>
     <lastmod>2023-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -312,6 +305,13 @@
   
   <url>
     <loc>http://liuydd.github.io/tags/cs-base-c/</loc>
+    <lastmod>2023-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://liuydd.github.io/tags/cs-transformers/</loc>
     <lastmod>2023-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
