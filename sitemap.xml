@@ -11,16 +11,16 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/2023/06/27/moyu5/</loc>
+    <loc>http://liuydd.github.io/2023/11/12/repo/</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2023-11-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/2023/11/12/repo/</loc>
+    <loc>http://liuydd.github.io/2023/06/27/moyu5/</loc>
     
     <lastmod>2023-11-12</lastmod>
     
@@ -266,13 +266,6 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/diary/</loc>
-    <lastmod>2023-11-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://liuydd.github.io/tags/%E4%BF%A1%E6%81%AF%E5%B7%AE-%E9%80%83%E7%A6%BB/</loc>
     <lastmod>2023-11-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -280,7 +273,7 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/cs-numpy/</loc>
+    <loc>http://liuydd.github.io/tags/diary/</loc>
     <lastmod>2023-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -294,14 +287,7 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/cs-PyTorch/</loc>
-    <lastmod>2023-11-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuydd.github.io/tags/%E9%9F%B3%E4%B9%90%E5%89%A7-%E8%88%9E%E5%89%A7-%E8%AF%9D%E5%89%A7/</loc>
+    <loc>http://liuydd.github.io/tags/cs-numpy/</loc>
     <lastmod>2023-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -315,7 +301,14 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/%E6%95%B0%E6%A8%A1/</loc>
+    <loc>http://liuydd.github.io/tags/%E9%9F%B3%E4%B9%90%E5%89%A7-%E8%88%9E%E5%89%A7-%E8%AF%9D%E5%89%A7/</loc>
+    <lastmod>2023-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://liuydd.github.io/tags/cs-PyTorch/</loc>
     <lastmod>2023-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -323,6 +316,13 @@
   
   <url>
     <loc>http://liuydd.github.io/tags/%E8%A7%82%E5%BD%B1/</loc>
+    <lastmod>2023-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://liuydd.github.io/tags/%E6%95%B0%E6%A8%A1/</loc>
     <lastmod>2023-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -373,14 +373,14 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/categories/%E6%B5%AE%E5%85%89%E6%8E%A0%E5%BD%B1/</loc>
+    <loc>http://liuydd.github.io/categories/info/</loc>
     <lastmod>2023-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/categories/info/</loc>
+    <loc>http://liuydd.github.io/categories/%E6%B5%AE%E5%85%89%E6%8E%A0%E5%BD%B1/</loc>
     <lastmod>2023-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
