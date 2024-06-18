@@ -298,7 +298,7 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/%E8%BD%AC%E7%B3%BB-%E6%80%BB%E7%BB%93/</loc>
+    <loc>http://liuydd.github.io/tags/cs-numpy/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -312,13 +312,6 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/cs-numpy/</loc>
-    <lastmod>2024-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://liuydd.github.io/tags/cs-paper/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -326,7 +319,7 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/%E9%9F%B3%E4%B9%90%E5%89%A7-%E8%88%9E%E5%89%A7-%E8%AF%9D%E5%89%A7/</loc>
+    <loc>http://liuydd.github.io/tags/%E8%BD%AC%E7%B3%BB-%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -340,14 +333,21 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/%E6%95%B0%E6%A8%A1/</loc>
+    <loc>http://liuydd.github.io/tags/%E8%A7%82%E5%BD%B1/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/%E8%A7%82%E5%BD%B1/</loc>
+    <loc>http://liuydd.github.io/tags/%E9%9F%B3%E4%B9%90%E5%89%A7-%E8%88%9E%E5%89%A7-%E8%AF%9D%E5%89%A7/</loc>
+    <lastmod>2024-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://liuydd.github.io/tags/%E6%95%B0%E6%A8%A1/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -361,14 +361,14 @@
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/%E5%A7%91%E8%8B%8F-%E5%9B%AD%E6%9E%97/</loc>
+    <loc>http://liuydd.github.io/tags/cs-transformers/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://liuydd.github.io/tags/cs-transformers/</loc>
+    <loc>http://liuydd.github.io/tags/%E5%A7%91%E8%8B%8F-%E5%9B%AD%E6%9E%97/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
