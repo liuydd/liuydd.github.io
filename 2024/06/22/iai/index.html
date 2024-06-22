@@ -1,0 +1,648 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>《人工智能导论》期末复习 | 等到天亮我们都寻找到最漂亮的愿望</title><meta name="keywords" content="notes"><meta name="author" content="Sheeta Liu"><meta name="copyright" content="Sheeta Liu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="😴">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《人工智能导论》期末复习">
+<meta property="og:url" content="http://liuydd.github.io/2024/06/22/iai/index.html">
+<meta property="og:site_name" content="等到天亮我们都寻找到最漂亮的愿望">
+<meta property="og:description" content="😴">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://liuydd.github.io/images/cover41.jpg">
+<meta property="article:published_time" content="2024-06-22T14:25:02.000Z">
+<meta property="article:modified_time" content="2024-06-22T14:45:08.606Z">
+<meta property="article:author" content="Sheeta Liu">
+<meta property="article:tag" content="notes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://liuydd.github.io/images/cover41.jpg"><link rel="shortcut icon" href="../../../../img/tubiao.jpg"><link rel="canonical" href="http://liuydd.github.io/2024/06/22/iai/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="../../../../css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '《人工智能导论》期末复习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-22 22:45:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3870185_ugzi44wm6l.css"><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="atom.xml" title="等到天亮我们都寻找到最漂亮的愿望" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="../img/touxiang2.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="../tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.html"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('../../../../images/cover41.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="../index.html">等到天亮我们都寻找到最漂亮的愿望</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.html"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《人工智能导论》期末复习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-22T14:25:02.000Z" title="发表于 2024-06-22 22:25:02">2024-06-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-22T14:45:08.606Z" title="更新于 2024-06-22 22:45:08">2024-06-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="../../../../categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《人工智能导论》期末复习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Readme"><a href="#Readme" class="headerlink" title="Readme"></a>Readme</h1><p><a target="_blank" rel="noopener" href="https://ur2x4vqise.feishu.cn/docx/TGZ1dUAMmoPBigxueO3cGibgnwg?from=from_copylink">这是我的人智导笔记</a></p>
+<p>2024spring期末，六道大题，分别考察了alpha-beta剪枝、修正的A*算法、SVM计算、神经网络的参数&#x2F;填充&#x2F;步长&#x2F;通道数、决策树的ID3和C4.5算法、设计一个全连接网络来得到核函数以及非线性向量机求解的伪代码</p>
+<p>复习过程大概是先看一遍雨课堂的回放，然后针对这些常考的算法做一些题，主要是PPT上的例题</p>
+<p>一开始1.5倍速看的回放，后来发现要看不完了，于是换成2倍速，发现这样短时间内大量地吸取知识居然还真的理解了不少之前没听懂&#x2F;没听进去的知识（？）就是过程有点煎熬，战线拉长了后大脑十分疲惫</p>
+<p>今年上完马老师就退休了，不知道以后的人智导课程内容与试题会是什么样子呢</p>
+<h2 id="第一章-搜索"><a href="#第一章-搜索" class="headerlink" title="第一章 搜索"></a>第一章 搜索</h2><blockquote>
+<p>宽度优先、深度优先、A<em>算法、修正的A</em>算法</p>
+</blockquote>
+<p>搜索是为了解决：如何选择一个（叶）节点<strong>扩展</strong>，这也是不同搜索算法的不同处</p>
+<h3 id="盲目搜索"><a href="#盲目搜索" class="headerlink" title="盲目搜索"></a>盲目搜索</h3><p><strong>没有任何启发信息</strong>，在图上随便找</p>
+<ol>
+<li>深度优先DFS</li>
+</ol>
+<p>根节点深度为0，逐层加1，采用的策略是<strong>优先选择深度深的节点扩展</strong>，两个节点深度一样的随机选择一个扩展。若本层所有的节点均不满足要求，则回溯一层，选择其他的节点再往下扩展</p>
+<p>Eg. 皇后问题：摆放要不同行不同列不同对角</p>
+<p>性质：</p>
+<ul>
+<li>一般不能保证找到最优解</li>
+<li>一般用DFS算法会增加一个深度限制（防止沿着一条无效的路一直走下去），所以当深度限制不合理时，可能找不到解，可以将算法改为可变深度限制（当某一深度限制比较小时，可以将其增加一点再BFS）</li>
+<li>最坏情况，DFS相当于穷举</li>
+</ul>
+<p>好处：<strong>节省内存</strong>，因为只储存了从初始节点到当前节点的路径</p>
+<ol>
+<li>宽度优先BFS</li>
+</ol>
+<p><strong>优先扩展深度浅的节点</strong>。每层逐次扩展所有节点</p>
+<p>Eg. 华容道</p>
+<p>性质：</p>
+<ul>
+<li>当问题有解时，一定能找到解</li>
+<li>当问题为<strong>单位耗散值</strong>（走一步的花费都是一样的），且问题有解时，一定能找到最优解（因为是一步一步来的）</li>
+<li>效率低，费空间（最优解、效率高和储存低一般不能同时满足）</li>
+</ul>
+<p>但是当问题不是单位耗散值时，BFS找的不一定是最优解，因为这时没有用节点之间的距离，而是用的节点的深度（这时要使用dijkstra算法）</p>
+<p>dijkstra算法是BFS算法的改进：<strong>优先扩展<strong><strong>距离起点最近</strong></strong>的节点，****直到终点距离最短</strong>（利用节点的距离信息，不是一找到目标就结束搜索）（算法的结束要满足两个条件：扩展到终点且终点距起点距离最近）</p>
+<p>性质：</p>
+<ul>
+<li>当问题有解时，可以找到最优解</li>
+<li>但是只考虑了节点距离起点的距离，没有考虑节点到终点的距离——&gt;启发式搜索</li>
+</ul>
+<h3 id="启发式搜索"><a href="#启发式搜索" class="headerlink" title="启发式搜索"></a>启发式搜索</h3><p>g*(n)：从s到n的最短路径的耗散值</p>
+<p>h*(n)：从n到目标的最短路径的耗散值</p>
+<p>f*(n) &#x3D; g*(n) + h*(n)：从s<strong>经过n</strong>到目标的最短路径的耗散值</p>
+<p>带<em>的是最短路径，不带</em>的是估计值</p>
+<p>一般用估计值代替进行搜索</p>
+<ol>
+<li>A算法</li>
+</ol>
+<p><strong>优先扩展f(n)值最小的节点，直到f(终点)最小</strong></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MTlkMTFiMmNkOGYxYzcyZTI4NzVkMDVhNDAyZThhNThfSVk5RzV6bWpnSU0yQUZFME1lZmxYbzRndFIzUUJ0eldfVG9rZW46UTRpa2Iza3g1b3RSMHB4V0RLWGNFZmIzbnVkXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>一个节点扩展出的节点要分为三类：m_k, m_j, m_l</p>
+<p>closed表：被扩展过的节点（子节点已经生成）</p>
+<p>open表：没有被扩展过的（即叶节点）</p>
+<p>算法描述：</p>
+<p>起始：open &#x3D; {s}, closed &#x3D; {}</p>
+<p>循环：</p>
+<p>大条件：只要open表不空（空了则问题无解，否则一定是最优解）</p>
+<p>操作：选择open表第一个节点n（即f值最小的节点）</p>
+<p>如果n是目标节点，则结束；</p>
+<p>如果n不是目标节点，则扩展节点n，将其移动到closed类中，并计算扩展出的子节点{m_i}的f(n, m_i) &#x3D; g(n, m_i) + h(m_i)——&gt;强调是从n过来的路径计算的</p>
+<p>将<strong>新节点m_j</strong>加入到open表中</p>
+<p>（特殊情况：</p>
+<p>  对于m_k（原来已存在但没有被进一步扩展）：如果新路径比原来的短，则用新路径代替原来的路径；</p>
+<p>  对于m_l（原来已存在且已被扩展有了子节点）：如果新路径比原来的短，则用新路径代替原来的路径，<strong>重新将m_l加入open表中</strong>（因为它的子节点的路径也可能被更新）</p>
+<p>  ）</p>
+<p>将open表中的节点按f值从小到大排序</p>
+<p>（感觉具体的算法描述好复杂，似乎可以用类似Dijkstra的方法手算？）</p>
+<p>怎么得到解路径：</p>
+<p>从目标开始，顺序访问父节点，直到初始节点</p>
+<p>不能保证找到最优解！因为f(n)是估计值</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NGFkYWRjM2EyODkxZGI2ZDAxZWRjNmEwMjhmMDE5Y2ZfU0NGVG9wNWhDbk9GS1BpSUxXM2dZa3JrWnl6QjM5QnVfVG9rZW46VTFDV2J1R0pHb2NIY0Z4WWRMcGM1V1plbkNnXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<ol>
+<li>A*算法</li>
+</ol>
+<p>在A算法中，如果h(n)≤h*(n)，则A算法称为A*算法</p>
+<p>A*算法能够保证找到最优解</p>
+<p>定义h函数的一般原则：放宽限制条件，在宽条件下，给出估计函数</p>
+<p>两个主要结论：</p>
+<ul>
+<li>可采纳性定理：保证找到最优解</li>
+<li>设对同一个问题定义了两个A*算法A1和A2，若A2比A1有较多的启发信息，即对所有的<strong>非目标节点</strong>有**h_2(n) &gt; h_1(n)**，则搜索结束时，由A2所扩展的每一个节点，也必定由A1所扩展（不太好的那个可能会扩展更多的节点，浪费更多的资源），即：</li>
+</ul>
+<p><strong>h2(n) &gt; h1(n)，则A1扩展的节点数 ≥ A2扩展的结点数</strong></p>
+<p>（h(n)更大，则更接近h*(n)，更优）</p>
+<p>（注意，是扩展的节点数，而不是节点次数。即同一个节点无论被扩展多少次，都只计算一次）</p>
+<p>对h的评价方法：通过实验</p>
+<p>平均分叉数b（如二叉树，b &#x3D; 2）</p>
+<p>设共扩展了d层节点，共搜索了N个节点，则：</p>
+<p>$$N &#x3D; \frac{1-b^{<em>(d+1)}}{1-b^</em>}$$</p>
+<p>通过N和d的值计算b*</p>
+<p><strong>b*越小，说明h效果越好</strong></p>
+<ol>
+<li>修正的A*算法</li>
+</ol>
+<p>因为A算法对m_l类节点可能要重新放回到open表中，因此可能会导致多次重复扩展同一个节点，导致搜索效率下降</p>
+<p>出现多次扩展节点的原因：在前面的扩展中，并没有找到从初始节点到当前节点的最短路径</p>
+<p>解决途径：</p>
+<p>①对h加以限制——&gt;h要是单调的</p>
+<p>h单调，满足条件：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YjgzZTVkMDIwN2QxMDg0MTU0OWQ2ZDVkM2QxMmQyYzdfalVGQXdpbGdtZHBxZzZVZ2pYN1dWaVFvME5WN0Z3QzRfVG9rZW46R0tQVWJFTDVsbzFSU014TU1wc2NlU0s4bmFoXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>若h(n)是单调的，则A<em>扩展了节点n之后，就已经找到了到达节点n的最佳路径。即当A</em>选n进行扩展时，有g(n) &#x3D; g*(n)</p>
+<p>②对算法加以改进</p>
+<p>将open表<strong>以f*(s)为界分为两个部分</strong>，由于f(n) &lt; f*(s)的节点一定被扩展，<strong>令f*(s)前面的节点</strong>（即f值<strong>小于</strong>f*(s)的节点）<strong>h值等于0</strong>，这样它们的h值是单调的，则对于这部分节点，<strong>选g最小的节点扩展</strong>（退化为dijkstra算法）</p>
+<p>由于不知道f*(s)的值，所以用估算值f_m代替：<strong>f_m是到目前为止已扩展节点的最大f值</strong></p>
+<p>相较于A算法，修正的算法增加了NEST数组，NEST数组里是f(n) &lt; f(m)的节点。当NEST数组不为空时，始终选择NEST中g值最小的节点，否则才选择open中f值最小的节点，<strong>且要修改f_m的值</strong></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YmFiNmJlNTI2ZTQ0YTA2MDQ2MDdkMGI2YzI3ZGE4YmVfZmJ2REJDb0FsVjlrSjZuQzdJUkd3QXVuMEUyQjdWM3dfVG9rZW46R0FIZGJaUzFYb0F6SHJ4ek4wWGN1blp2bllmXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<h3 id="其他的搜索算法"><a href="#其他的搜索算法" class="headerlink" title="其他的搜索算法"></a>其他的搜索算法</h3><ol>
+<li>爬山法（局部搜索算法）</li>
+</ol>
+<p>只能利用局部信息</p>
+<ol>
+<li>随机搜索算法</li>
+<li>动态规划算法——vitebi算法</li>
+</ol>
+<p>理论上，当h(n) &#x3D; 0时，A*算法退化为动态规划算法</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=N2FhNjIwODExYWE2MDE4ZGEzZjdiNWU4NmUxMDhhOTRfN0FOM2dOUHdaU0RUcXplVE9ScGZxcWRsUmNUQ2hOQ09fVG9rZW46T1dVUGI1em96b1M2N0V4TDU5aWNOcDRDbjhjXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>利用上一个节点的结果，而不是从头计算</p>
+<p>公式如下：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2ZjYzEzZDQwOGFlNjFlNGU1ZGU0ZDZmMGIyNzBhNGNfd21ZbWVtRTJnTVJiekVWdDFHMk93RDNaSXN1M0psWVJfVG9rZW46Smo0a2JYQktyb0RKSkx4T3d5NmNjVkpWblJjXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<h2 id="第二章-神经网络与深度学习"><a href="#第二章-神经网络与深度学习" class="headerlink" title="第二章 神经网络与深度学习"></a>第二章 神经网络与深度学习</h2><blockquote>
+<p>全连接网络、卷积网络、循环网络的运算等等、相关例子、求词向量、几种损失函数、</p>
+</blockquote>
+<h3 id="什么是神经元"><a href="#什么是神经元" class="headerlink" title="什么是神经元"></a>什么是神经元</h3><p>从模式匹配说起：</p>
+<p>sigmoid函数：将匹配结果转换到0-1之间，判断匹配的程度（可以通过增加偏置项让sigmoid函数平移）</p>
+<p>sigmoid是激活函数，还有别的激活函数</p>
+<p>迁移到神经元的图：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=Njk5NDMxMzMyMTZmODIzNDZkZDc0Y2M3YjYyYWNlYmFfN0NQdG9HQ3dpZWF3MmpsN0dnT3ZNMTlvbXdmTDVWOGlfVG9rZW46TWtLcWJWeW5Pb2t4eWt4SFgyWGNnQjA4bldmXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>神经元：某个模式的表达，将输入与模式进行匹配</p>
+<p>神经网络的横向扩展：增加模式</p>
+<p>神经网络的纵向扩展：局部模式（模式组合让神经网络更深）</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NGNiODQzMWFlODQ0ODgwMzNkMzA3ZGYyODJkMjg1YTNfV2Q2S1RDSjlSc3daUWVmZjhvWHpoM1g4QllJMG5MejdfVG9rZW46QnZKN2JNTlpib0JVbjB4c3diQ2NLZ1lvbm5lXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>多层神经网络：输入层-&gt;隐含层-&gt;隐含层-&gt;…-&gt;输出层</p>
+<p>模式通过神经元的连接权重表示，是模型自动学习的，不是手工设计的！</p>
+<p>神经元完整结构：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MDUwNDNkYjgyMzY0ZGNjMWIzOTI2OTgzOWNlYTMzZDNfNHVSMldrR3JTRUI3T1JxNXN4elVNa2drS2F1ZnRobUlfVG9rZW46T3A3WWJrSG1Ib1gzUjV4U3VVQmNVZ2FlbkxlXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<h3 id="全连接网络"><a href="#全连接网络" class="headerlink" title="全连接网络"></a>全连接网络</h3><p>相邻两个层的每一个神经元都有连接</p>
+<p>损失函数：误差平方和</p>
+<p>用于输出是具体数值的问题</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YTE0NjliNjZkNmRmN2M1ZjljMWJmOTI3NWQyMDY1NmJfZ205djFZajRzRnRlTEpWNk1zWHNocjNSN0N2a2J1eTZfVG9rZW46SzVxY2Jjbkgyb053dHJ4MHA5MGNDMUhybnRoXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>神经网络的学习——&gt;让损失函数最小</p>
+<p>方法：梯度下降法（类比单一变量求导数，对损失函数求梯度）</p>
+<ul>
+<li>批量梯度下降算法：每次处理全部样本</li>
+<li>随机梯度下降算法：每次处理一个样本，顺序随机。<ul>
+<li>问题：样本存在噪声，在处理某个样本时可能发生错误。此外，样本并且完全正确，如标注错误等。</li>
+</ul>
+</li>
+<li>小批量梯度下降算法：每次处理小批量的样本</li>
+</ul>
+<p>梯度计算：基于随机梯度下降算法。从输出层开始，通过链式法则逐层求梯度，直到输入层<strong>（BP算法）</strong></p>
+<ul>
+<li>对输出层的神经元：</li>
+</ul>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OGE5Y2JhNWY0NDlmMGYwZmVlNzk3ZjBlZWI1YWM5ZTlfbmVQbDFaY2c2aUpjRGZvc3RvQnRvYkdSemxkYW56TFVfVG9rZW46Q05tTmIyNTI2b3pRSVp4NURhRmNicFA1bmhlXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<ul>
+<li>对隐含层的神经元（考虑紧挨着输出层的隐含层）</li>
+</ul>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YjBmOWVhNjY3OWRkM2IxOTU0YjE0NDU2MGJhNGRjMWVfak5yMU9KWHZuYnVJbVRBbjdYRDUyT0VxNVdyQk9NTzRfVG9rZW46UHRTcmJheXcwb05EbGl4cXBJMmNlNkRrbm5IXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YmM3NjNhYmZmOWM3ZTQ0MGE1OWZiNGExZGUzY2I4OGNfM0ZNd2tPR2hLWU84T3FqU05EZTdOdk5Id2c0TFZVRkxfVG9rZW46VUtjc2JzcllDb1BYcXp4WTl6VGNHaUdFbnZnXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>“反向”：从输入算出输出，再从输出来逐层向下计算delta来计算每层的权值w</p>
+<p>其他的损失函数：交叉熵损失函数</p>
+<p>也是越小越好</p>
+<p>要加一层softmax激活函数，来得到概率</p>
+<p>用于分类问题</p>
+<h3 id="卷积神经网络CNN"><a href="#卷积神经网络CNN" class="headerlink" title="卷积神经网络CNN"></a>卷积神经网络CNN</h3><p>全连接网络的不足：连接权重过多、影响训练速度、影响使用速度</p>
+<p>特点：</p>
+<ul>
+<li>局部连接</li>
+<li>权值共享</li>
+</ul>
+<p>在一个大的输入图像中抽取一些小的模式</p>
+<p>权值：卷积核，通过训练得到</p>
+<p>一个卷积核相当于一个小的神经元，代表了某种模式</p>
+<p>填充：比如输入5x5，卷积核是3x3，想要结果保持5x5大小不变，则可以在外围加一层全为0的数</p>
+<p>步长：卷积核每次移动的距离，是可以设定的</p>
+<p>多卷积核：</p>
+<p>一个卷积核产生一个<strong>通道</strong>，输出的通道数等于卷积核数</p>
+<p>多通道输入时的卷积：</p>
+<p>如输入6x6x3，则卷积核为3x3x3（是一个卷积核！得到的是一个通道），最后一个数字表示厚度</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MTdiYzYwN2E1OGRmMWNhZGUzZDQ2YWJhNzc1NDNmZDZfQ0JTWWZSRU51TEk4UFVrbldFNzZLTkNocHVSdjUxQm1fVG9rZW46UHBGR2I1bFdCb3Q0bHl4OGc5UGNiT2Vrbm9lXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>多层小卷积可以实现大卷积</p>
+<p>池化：一种降维的手段</p>
+<p>最大池化：取窗口内的最大值，如：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YTAwOTk0OGNjNjY3ZjBiZjUzZjA5MTRmYjk0NjhkODdfVFVaejc4S1ZOQm81ZUdkNThJeGh0TnE4UnRqbDRUZnVfVG9rZW46TWFkMWI5Y05hb05DcWF4bTFXRGNteVl0bkJkXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>窗口可重叠，与步长有关</p>
+<p><strong>池化是对通道做的</strong>，每个通道单独做池化！做完池化前后通道数不变</p>
+<p>举例：</p>
+<ol>
+<li>LeNet神经网络</li>
+<li>VGG-16神经网络</li>
+</ol>
+<p>特点：</p>
+<ul>
+<li>参数少，只与卷积核的大小和数量有关</li>
+<li>具有特征抽取能力（卷积核）</li>
+<li>一定程度上，特征的平移不变性（通过池化）</li>
+</ul>
+<h3 id="神经网络遇到的两大问题"><a href="#神经网络遇到的两大问题" class="headerlink" title="神经网络遇到的两大问题"></a>神经网络遇到的两大问题</h3><ol>
+<li>梯度消失问题</li>
+</ol>
+<p>神经网络靠梯度对参数进行修正</p>
+<p>解决思路：</p>
+<p>使用ReLU激活函数（之前使用的是sigmoid函数），消除由于激活函数的导数造成的梯度消失</p>
+<p>两个实例，看怎么解决梯度消失问题的：</p>
+<ul>
+<li>GoogLeNet</li>
+</ul>
+<p>三个输出</p>
+<p>类似高楼供水，分多个口解决</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ODRhY2NkMDc5YTRlMjE1YzY4ZmQ0YWEzMWRiMTBjMmZfN1NyUTVPajNwUjRxTXJMVzVXc2JMN01iVDNVcWdRbGlfVG9rZW46WFBiMGJKcTJYb2JtUXh4SXJJM2NkZnFXbnFmXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>Inception模块：</p>
+<p>同时使用不同大小的卷积核</p>
+<p>1×1卷积降维</p>
+<ul>
+<li>残差网络（ResNet）</li>
+</ul>
+<p>神经网络的退化现象</p>
+<p>解决思路：加了一个恒等映射，形成残差模块，至少保证原来的性能</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmIwMjYzMzJkZDQ4OWI0MmRhMGU2M2ZjN2QyZmMyZGZfdXkzNFpDcDc1dTFXWmNxSU5td1ZpTVVlUzc1WEEwNW1fVG9rZW46UnN1NWJac3dLb1hMc0p4YjdFeGNzemVHbnliXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=Njg1MDc3MGUxNTU4ZGFjODZmNGFjZmFlOTA3NTZjNDFfbk9paFFJdHZvd1VVSXZQMjFraHZFSGxweXNNMlF1TjhfVG9rZW46WHJLNGJuSkpIb0FHa0J4OVdEamM5YldtbnNlXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<ol>
+<li>过拟合问题</li>
+</ol>
+<p>过拟合：曲线弯曲过多，模型过于复杂</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NDRlY2U0MjlhNDhiMTRiZjZiZmRmMWVhZTJmYWFjZjlfdVVLVDRxTkZOUXk1alFvd2lualo4UGhaZDY0OGFuQjBfVG9rZW46R3RmM2JpR1p4b2lGNjV4YnZ0bWN0cW91bjhpXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>减少过拟合方法：</p>
+<ul>
+<li>使用验证集：当在验证集上的错误率最低时停止训练</li>
+<li>正则化项法：增加一个权重平方和（范数）<ul>
+<li>正则化项的作用：降低模型复杂性</li>
+</ul>
+</li>
+<li>舍弃法Dropout<ul>
+<li>随机地临时舍弃一些神经元</li>
+<li>少数神经元得到了充分训练，其他的没有，所以每个神经元都得到了充分训练（集成学习）</li>
+</ul>
+</li>
+<li>数据增强法：数据越多，过拟合的风险就越小</li>
+</ul>
+<h3 id="词向量"><a href="#词向量" class="headerlink" title="词向量"></a>词向量</h3><p>怎么处理文本，让一个词在内部表达中具有语义</p>
+<ol>
+<li>独热（one-hot）编码</li>
+</ol>
+<p>用与词表等长的向量表示一个词，向量只要一个元素为1，其余为0，第i个元素为1的向量用于表示词表中第i个词</p>
+<p>特点：稀疏，简单，但是编码太长，且无法度量词之间的相似性</p>
+<ol>
+<li>分布式表示</li>
+</ol>
+<p>稠密向量，每一位都用上</p>
+<p>如一个词：（&lt;动物&gt;，&lt;植物&gt;，&lt;食物&gt;）</p>
+<p>得到词向量实际做法：词嵌入Word Embedding（将词向量从高维空间嵌入到低维空间中的一个方法）</p>
+<p>利用语言模型</p>
+<p>词向量也是在训练神经网络语言模型中被训练出来的</p>
+<p>如何训练神经网络语言模型：最大似然方法估计神经网络语言模型的参数</p>
+<p>如何训练词向量：也是bp算法，将输入固定为1，将要得到的参数当作权重</p>
+<p>word2vec模型：一种简化的神经网络语言模型</p>
+<p>两种实现方式：</p>
+<ul>
+<li>连续词袋模型CBOW：一个句子的含义只与句子中的词有关，与词的顺序无关<ul>
+<li>求和，然后利用霍夫曼树<ul>
+<li><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MGMxNzgyZGU4NjJmNmU0YWFkN2ZlNDg1MjE1ZDE4OGRfTVgwTlprZENnQzJxd1hmWGVZOFFBUWd6QVFOTjR3aXpfVG9rZW46TmdwUWJLWGozbzV0Rlh4b3YxNWNNVUlqbk1nXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>跳词模型Skip-Gram Model：</li>
+</ul>
+<p>词向量应用举例：TextCNN</p>
+<h3 id="循环神经网络RNN"><a href="#循环神经网络RNN" class="headerlink" title="循环神经网络RNN"></a>循环神经网络RNN</h3><p>循环模块：</p>
+<p>前i-1个词的输出+第i个词向量</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YzViOTU3ZWNlNTIwMDJkZWRjOTE3Y2QxYWYwMjZlNTJfQUtqakl0ZzRwZFdsT2lnNnJhaHpvaWpmNm1LTFp1WjZfVG9rZW46TWpOUGJqeExrb09MRUZ4cGpBQ2N1QXk2bmhoXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>双向循环神经网络：</p>
+<p>问题的提出：序列前面的内容被后面的内容淹没</p>
+<p>方式：正向来一次，反向来一次，得到的向量拼接在一起</p>
+<p>长短期记忆网络LSTM：</p>
+<h2 id="第三章-对抗搜索"><a href="#第三章-对抗搜索" class="headerlink" title="第三章 对抗搜索"></a>第三章 对抗搜索</h2><blockquote>
+<p>alpha-beta剪枝；蒙特卡洛搜索（四步）；alpha狗的策略网络、估值网络怎么计算、怎么与蒙特卡洛搜索结合；三种基本的强化学习方法；</p>
+</blockquote>
+<h3 id="极小-极大模型"><a href="#极小-极大模型" class="headerlink" title="极小-极大模型"></a>极小-极大模型</h3><p>从下往上</p>
+<p>极小点：该对方走，选择二者中更小的数</p>
+<p>极大点：自己走，选择二者中更大的数</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=Mzc5N2Q2Mjk4ZGM1MmJlZWU0N2MxNWIzNWNlOTFkYmZfVUNDUWg5bFZrSFZZTHQyVjl3c0VJRkswZk1qNWRvS0xfVG9rZW46R0tVR2JrRWI2b3QzaTh4M290VGNGSGlobjVlXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<h3 id="alpha-beta剪枝"><a href="#alpha-beta剪枝" class="headerlink" title="alpha-beta剪枝"></a>alpha-beta剪枝</h3><p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NTNlNzI3ODg2OTAyYTU1NzIyZmU0NTVjMjdiZjEwMDRfYW9yQ2dZRUhtcXZsak1QUFhSZ1lTQlFvN1ZScnFzYUxfVG9rZW46WFA1aGJEaEcwb2l4cnZ4VGQ1WmNTSTRKblVkXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=M2RkOWQxYTNhOGIyODIwZmU4MjYyMTYyYzVhYWU0MzhfeXd3SDRJYXBpdVNOUkYwOExSdzRla0gzZjY1VVUwZkZfVG9rZW46UHczTmJRWHRLb013VHR4aHJIemNYajZRbmljXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<h3 id="蒙特卡洛树搜索"><a href="#蒙特卡洛树搜索" class="headerlink" title="蒙特卡洛树搜索"></a>蒙特卡洛树搜索</h3><ul>
+<li>选择</li>
+<li>扩展</li>
+<li>模拟</li>
+<li>回传</li>
+</ul>
+<p><strong>选择策略：</strong> </p>
+<p>对尚未充分了解的节点的探索</p>
+<p>对当前具有较大希望节点的利用</p>
+<p>信心上限算法UCB</p>
+<p>节点不是随机选择，而是<strong>根据UCB1选择信心上限值最大的节点</strong></p>
+<p>每次选中、模拟、回传后，要从最上面第一层选择子节点，选择信心上限最大的节点进行模拟</p>
+<p>可能被选择扩展的节点需要满足：</p>
+<ul>
+<li><strong>还有子节点没有生成</strong></li>
+<li>在上一节点的子节点中信心上限最大</li>
+</ul>
+<p><strong>回传</strong>的方式：</p>
+<p>这一条路径上所有节点的总扩展次数加1</p>
+<p>同色的节点获胜的次数不变（模拟的节点输了）或加1（模拟的节点胜了）</p>
+<h3 id="AlphaGo"><a href="#AlphaGo" class="headerlink" title="AlphaGo"></a>AlphaGo</h3><p>将神经网络与蒙特卡洛树搜索结合在一起</p>
+<p>引入了围棋的经验知识，减少盲目性</p>
+<p>主要用的两类网络：</p>
+<ol>
+<li>有监督学习的策略网络</li>
+</ol>
+<p>输入：当前棋局，48个19x19的通道</p>
+<p>有361个输出，是棋局上每个点的行棋概率</p>
+<p>等效为一个分类问题</p>
+<p>目标：像人类那样下棋</p>
+<ol>
+<li>估值网络</li>
+</ol>
+<p>输入有49个通道</p>
+<p>只有一个输出，表示输入的棋局的胜率情况，[-1, 1]</p>
+<p>等效为一个回归问题</p>
+<p>与蒙特卡洛树搜索融合：</p>
+<ul>
+<li>利用：收益好的节点</li>
+<li>探索：模拟次数少的节点</li>
+<li>经验：落子概率高的节点</li>
+</ul>
+<p>由于有估值网络，所以可以直接选择，优先选择Q+u大的子节点，直到遇到叶节点结束，该节点被选中，生成它的所有子节点</p>
+<p>对被选中的节点进行模拟，规定了模拟次数与树的深度</p>
+<p>回传过程：是正负交替的，直到传到祖先节点</p>
+<p>AlphaGo如何确定走步：</p>
+<p><strong>根节点子节点中被选中次数最多的节点作为最终的走步</strong></p>
+<p>（收益多但被选择次数少的节点可能不太可靠，故选被选择次数最多的节点）</p>
+<h3 id="围棋中的深度强化学习方法"><a href="#围棋中的深度强化学习方法" class="headerlink" title="围棋中的深度强化学习方法"></a>围棋中的深度强化学习方法</h3><p>强化学习：试错与延迟收益</p>
+<p>将收益转化为标注，不能获得所有情况下既正确又有代表性的示例</p>
+<p>三种强化学习方法：</p>
+<ol>
+<li>基于策略梯度的强化学习</li>
+</ol>
+<p>在强化学习过程中，每个样本只使用一次（样本不一定准确；有足够的样本供其学习）</p>
+<p>基于策略梯度的强化学习方法学到的是在每个可落子点行棋的获胜概率（监督学习策略网络学到的是在某个可落子点行棋的概率）</p>
+<ol>
+<li>基于价值评估的强化学习</li>
+</ol>
+<p>输入：当前棋局和当前行棋点</p>
+<p>输出：取值在[-1, 1]之间的估值</p>
+<p>对一个行棋点的价值（即收益）进行评估</p>
+<ol>
+<li>基于演员-评价方法的强化学习</li>
+</ol>
+<p>找出关键的点</p>
+<p>演员：策略网络</p>
+<p>评价：评估网络</p>
+<p>收益增量A：评价一步棋的好坏。A越大越说明走了一步妙招</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MTBlZjAwZjBiMGRhYTE4MzRiYzExMWQ0ZDY1MjQzYjdfRjVMWjVMMjZUdnRhQXNrS05uYndXeDJIcWR6eWdQbGdfVG9rZW46STN3RWJxY1JqbzlvWEp4RUZObWNVQjlsbkRnXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<h3 id="AlphaGo-Zero"><a href="#AlphaGo-Zero" class="headerlink" title="AlphaGo Zero"></a>AlphaGo Zero</h3><p>升级版</p>
+<p>利用强化学习从零学习，不用人类棋手的数据以及人工特征作为输入</p>
+<p>将策略网络和估值网络合并为一个双输出网络</p>
+<p>输入：17个通道</p>
+<p>没有随机模拟了，只用估值网络</p>
+<p>将MCTS结合到深度强化学习中</p>
+<p>引入多样性：防止走向错误的方向，对策略网络的输出增加噪声（MCTS具有纠错能力）</p>
+<h2 id="第四章-统计机器学习"><a href="#第四章-统计机器学习" class="headerlink" title="第四章 统计机器学习"></a>第四章 统计机器学习</h2><blockquote>
+<p>id3和c4.5方法，id3要算信息增益，c4.5是信息增益比，最后有个什么剪枝（？</p>
+</blockquote>
+<p>分类：</p>
+<ul>
+<li>监督学习</li>
+<li>非监督学习</li>
+<li>半监督学习</li>
+<li>弱监督</li>
+</ul>
+<h3 id="支持向量机SVM"><a href="#支持向量机SVM" class="headerlink" title="支持向量机SVM"></a>支持向量机SVM</h3><p>二类分类器（只能分为两类）</p>
+<p><strong>间隔最大化</strong>线性分类器，通过核技巧实现非线性分类</p>
+<p><strong>线性可分支持向量机</strong> ：</p>
+<ol>
+<li>定义</li>
+</ol>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NWJlNjE1ZDQ4NjIyZmY3ODNlYjgxMjQyOGVkYzQ2NmNfemxjemYzZlRkUFJxUVpoalNGd01QZW5ER2EwNHlsMUVfVG9rZW46TWJ5ZmI3dEZKb1dlNXB4bGx2Y2NVTnYxblBQXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>即y_i等于±1</p>
+<p>目的是求w<em>和b</em> </p>
+<ol>
+<li>函数间隔</li>
+</ol>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YTUzNmQwYjMzNzdhMTIzZDM0ODIxYjhlODdkY2RhNGZfcTI4SWxwUWE3cHFWSkxSVmQ4d0g0aUtmVkU4NEtEVTBfVG9rZW46SGJWaWI2SERnb2dNWUp4UHhocGNveWsybnplXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<ol>
+<li>几何间隔</li>
+</ol>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWJlMTA5NjQzYTc4ODE2NTE0ZjcxYThiMjg0MWFkMTdfOW52Ym00T1ExWHRnUkRDTTJ5dmZDNFRpR2dBU0xiM2xfVG9rZW46VFZ3YWJkWmoxb2diOGJ4RVgwcmNuNkdlbmJoXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<ol>
+<li>间隔最大化</li>
+</ol>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NTBjYWI0OWRlMTZjNTVkNGQ4OWViMTE1M2M3MTlkNzNfUXZqSWUzekNVelg2RTJIYjdMT05DR0hpWUt2WFpDV2RfVG9rZW46VGpYSWJGbmF4b2pDRHd4V1JMZ2NrcDJPbmVkXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>——&gt;</p>
+<p>问题转化为如下的凸二次规划问题：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NGM5NmU1ZDVhZjdhNjMyNjI2MzY3ZjViMGJiZTRjZWNfZHc4M0lWZ0tFQkJwS1lkd1ZldlZEQjh5TWppTnBQVE1fVG9rZW46WXhFamI2ak94bzhnSXF4R1BrOWM4QUZHbjFjXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YTA5NGY0OWVmNGM3ZThiMjVlNGU0MDQxZTgwNWUxZmZfaXJzNnNIMUVFejZZWW41SUhmZkJBSGdybDdUSEE0c05fVG9rZW46S1p2NWJ5VWs1b09lWnp4UjVSNGN6ekxUbm1nXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<ol>
+<li>学习的对偶算法</li>
+</ol>
+<p>利用拉格朗日函数：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=M2U4N2M2M2U2MjI4NTg0ZTZlNmE3ZjgwM2NjNmU4ZGZfNHdvQU5RZmlneHJPcDVpbmtYNFA4bE01cWs4ckIwWWFfVG9rZW46VzNUTmIwVFBkb1pSUkR4ZEV3dGNCWmpTbm85XzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjU1MzA3Yzg0NjIxNzY4YjI0N2M2MDM5YTNjODY0YjFfTm91Ykoydk5xa3NLcXE0S2RpME92c1ZKRklRWU1kMk1fVG9rZW46RGs1bWJqTllEbzJJT1h4bG5XamN3TlJEbnZlXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YTU3ZGI4MjBkYTg3Yzg0ZDViYzFmOWQ3MmQ1NmZlZmJfN0lPSnlkNjFJaGFaOWt2WklxakZobGIwT0k0RkJrM21fVG9rZW46Umt2MGJobVNyb2Q4TjB4Vk0zZWNZbFRVbmZnXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ODk5ZjU4ZjNhNmY1NTE2NTJkMWU1ODZhNDQxNjMyMTNfYjBKQ1l5aEtudnVibWFGZXYzRDR6cExSYzUxUjluZU5fVG9rZW46RFhFdmJPbk8wb3o5Tkx4UUJYRWNONXQ1bkdiXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmIwNTE5YjFmYzc2MjAyODQ0NWFhYzRjODY2Nzg2NGJfMXUxcURCdjdkaFA3cXVFMlM4UU1tdG5PdHFjMEpvakNfVG9rZW46TVhaRGJNbVNJb0hjNTF4ZVdVRGM4Z2hsbk9oXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NzEyZWNkN2VkOWEwYzhhMmYwNjQzOWE1YTE4MjZkNjBfOFhKTVFlSzZDaEkwTk0wUnZzYjZPY1BXcTNMcXJnZGJfVG9rZW46TlM1SmJPbzFmb08xZHV4bUI0VWNUUHR0bmhjXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NDY4NTQ1OGE2YWM0ZGZlMjhhY2E5ZjNjMmNmZTBkNzBfV3ozc2g3cmtSekI5SnhLbDFlczJuS2VkanY5TUFCcmVfVG9rZW46TlZPTWJFaThNb3dFZ1l4NHp5SGM1YnZqbjQ4XzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTMxOTQwOGZmMGE0ZmJlM2NiNzQ3ZWNjZWVlOGQwMmFfSGlzS3FpNGhwQWQwR0pWVzgxdmNqT1FiajA5a1YxZDJfVG9rZW46VVlZUGI5U3dXb0l5S3d4TUl5WWNoQ3BobmdiXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>线性可分支持向量机：</p>
+<p>引入松弛变量：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=N2VjZTk3NjIzZjY4NDU4OWVhYjk2MjRhMzFlYTViOWFfUkJBV2ZNVVFnZjNCU0Rmb0VTWm4wMG5QY0tJTWVXYnpfVG9rZW46R1o1b2IyYWw3bzVCOHZ4anJLa2NDcUFmbmxmXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjZkMWYyNDdiZjRiYWEzZTYwMWVkMWZlM2M1ZTk3ZDRfSGlrZ1NZSXoxZ3U5YTlPdkVFSTNPOTg5UEdOUFlNZmNfVG9rZW46VE9pb2JRWms2b3ZpYkR4bEJCZ2NreGQ1bnJIXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>对偶问题对alpha加了一个限制：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NGFlNTNjNTZjZjk1NzA2ODM0MTAwY2U3MDE1ZTY4OGFfSHVwOVlvejcyZFdSVm9qZU5QZGhjMTNmT01yQ0xWdjRfVG9rZW46UHpLYmI1Zzg5b09BM1V4Tm1BQmMxRDZqbjljXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzc1MGFiNjhmYzU0ZmYzZmFmNGQxZjM5MmYwZWIzNThfZXR2NnJYeWNucHZySzJTY2txdmZKemRyS1IzZGI5ajNfVG9rZW46SXNoTGJ4SUZ3b1JscW94MDNoMWM0d2VkbndoXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>非线性分类问题：使用一个变换，将原空间数据映射到新空间中</p>
+<p>SVM应用：文本分类</p>
+<p>i是词项，j是文档</p>
+<p>t_ij表示第i个词项在文档j中的词频，用来表示权重</p>
+<p>df_i：出现词项i的文档树&#x2F;N，文档频率</p>
+<p>idf_i：逆文档频率，idf_i &#x3D; log(1&#x2F;df_i)</p>
+<h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><p>决策树模型是一种描述对实例进行分类的树形结构，由节点和有向边组成</p>
+<p>节点有两种类型：内部节点和叶节点。内部节点表示一个特征或者属性，叶节点表示一个类</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MzUwYTM2NmI1NDA3YTBmOTEwYWE3ODQ0YTE0Y2MwODJfVGc4N1dHVGt2S1lXejI2Nngxc0ptY1Bma2c0UDZXTGJfVG9rZW46T1VuVWJ1UmNIb1hMbFZ4NnF2MmNWZVpMbjZmXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<ol>
+<li>特征选择</li>
+</ol>
+<p>按照<strong>信息增益</strong>选择特征</p>
+<p>信息增益：某个特征A对数据集D进行分类的不确定性减少的程度</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OTRiYTg3Yzg2ZjgyMzMxMWYzZmQzY2M1OWI1YmFiZTlfSmx2VVA1eWVNRE1lcEJCSlVSc2RsaHpnTTRLdG5JWFpfVG9rZW46WGk2dWJSdjN2b3hSR0Z4WXc4bWNtbEhtbkRmXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MzNkNjgwN2ZiYTgwYWNlNWQ1MGJlMGQ1YzE2Y2E1YzFfZDdXVUJRdW1jaFl4SHd1c2lKWFJOYUxSNFBXQ2g2M1VfVG9rZW46QmtqZmI5ajRXb2RoZWl4QU1zdGNqeW1pbmJkXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NDc5ZWQwNjI1YjA4NTlmOWMzZjlmYjFhMjNkYTAzZWRfSkpFMnB2cnZ4elUwTlF5RGI5T3J2bVRQMTFCbWNmYW9fVG9rZW46UmdWdmJoeTNsb2VEZzR4N2lueWNlV1o0bjZlXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<ol>
+<li>决策树生成</li>
+</ol>
+<p>①ID3</p>
+<p>基本的决策树生成算法</p>
+<p>递归的算法</p>
+<p>看例子，信息熵的算法类似概率</p>
+<p>②C4.5</p>
+<p>对ID3的改进</p>
+<p>利用信息增益比</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OTEyZDUxOTQzY2E3YTk1NzdlYThjYTAxOWVjZGNmMjZfOEVXTFptb1FQYURSTDQ1M2tMUTJKcWI2MlJYa2RVUm1fVG9rZW46UThEcmJUV0ZVb3E0NFV4bE50VWNmSE9zbkNoXzE3MTkwNjY4MDc6MTcxOTA3MDQwN19WNA" alt="img"></p>
+<p>此时对熵的计算方法不一样，之前是按照最终的分类结果计算，现在是按照当前的分类</p>
+<p>C4.5增加了对连续值属性的处理</p>
+<ol>
+<li>决策树剪枝</li>
+</ol>
+<p>为了防止过拟合问题</p>
+<p>后剪枝：先生成树，再剪枝</p>
+<p>从下往上，看子节点是否可以合并到父节点</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://liuydd.github.io">Sheeta Liu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://liuydd.github.io/2024/06/22/iai/">http://liuydd.github.io/2024/06/22/iai/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://liuydd.github.io" target="_blank">等到天亮我们都寻找到最漂亮的愿望</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../../tags/notes/">notes</a></div><div class="post_share"><div class="social-share" data-image="../../../../images/cover41.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="../digitallogic/"><img class="next-cover" src="../../../../images/cover40.jpg" onerror="onerror=null;src='../../../../img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《数字逻辑电路》期末复习</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="../digitallogic/" title="《数字逻辑电路》期末复习"><img class="cover" src="../../../../images/cover40.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-06-22</div><div class="title">《数字逻辑电路》期末复习</div></div></a></div><div><a href="../../17/networks/" title="《计算机网络原理》期末复习"><img class="cover" src="../../../../images/cover39.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-06-17</div><div class="title">《计算机网络原理》期末复习</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="../img/touxiang2.jpg" onerror="this.onerror=null;this.src='../img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Sheeta Liu</div><div class="author-info__description">生活不需要意义，吃点好的，我也爱你</div></div><div class="card-info-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="../tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/liuydd"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">众生皆苦，唯有自渡...</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Readme"><span class="toc-number">1.</span> <span class="toc-text">Readme</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%90%9C%E7%B4%A2"><span class="toc-number">1.1.</span> <span class="toc-text">第一章 搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B2%E7%9B%AE%E6%90%9C%E7%B4%A2"><span class="toc-number">1.1.1.</span> <span class="toc-text">盲目搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8F%91%E5%BC%8F%E6%90%9C%E7%B4%A2"><span class="toc-number">1.1.2.</span> <span class="toc-text">启发式搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%9A%84%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">其他的搜索算法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.2.</span> <span class="toc-text">第二章 神经网络与深度学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%A5%9E%E7%BB%8F%E5%85%83"><span class="toc-number">1.2.1.</span> <span class="toc-text">什么是神经元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E8%BF%9E%E6%8E%A5%E7%BD%91%E7%BB%9C"><span class="toc-number">1.2.2.</span> <span class="toc-text">全连接网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9CCNN"><span class="toc-number">1.2.3.</span> <span class="toc-text">卷积神经网络CNN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E5%A4%A7%E9%97%AE%E9%A2%98"><span class="toc-number">1.2.4.</span> <span class="toc-text">神经网络遇到的两大问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%8D%E5%90%91%E9%87%8F"><span class="toc-number">1.2.5.</span> <span class="toc-text">词向量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9CRNN"><span class="toc-number">1.2.6.</span> <span class="toc-text">循环神经网络RNN</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%AF%B9%E6%8A%97%E6%90%9C%E7%B4%A2"><span class="toc-number">1.3.</span> <span class="toc-text">第三章 对抗搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%81%E5%B0%8F-%E6%9E%81%E5%A4%A7%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">极小-极大模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#alpha-beta%E5%89%AA%E6%9E%9D"><span class="toc-number">1.3.2.</span> <span class="toc-text">alpha-beta剪枝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A0%91%E6%90%9C%E7%B4%A2"><span class="toc-number">1.3.3.</span> <span class="toc-text">蒙特卡洛树搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AlphaGo"><span class="toc-number">1.3.4.</span> <span class="toc-text">AlphaGo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%B4%E6%A3%8B%E4%B8%AD%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.5.</span> <span class="toc-text">围棋中的深度强化学习方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AlphaGo-Zero"><span class="toc-number">1.3.6.</span> <span class="toc-text">AlphaGo Zero</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.4.</span> <span class="toc-text">第四章 统计机器学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BASVM"><span class="toc-number">1.4.1.</span> <span class="toc-text">支持向量机SVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-number">1.4.2.</span> <span class="toc-text">决策树</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="../2024/06/22/iai/" title="《人工智能导论》期末复习"><img src="../images/cover41.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="《人工智能导论》期末复习"/></a><div class="content"><a class="title" href="../2024/06/22/iai/" title="《人工智能导论》期末复习">《人工智能导论》期末复习</a><time datetime="2024-06-22T14:25:02.000Z" title="发表于 2024-06-22 22:25:02">2024-06-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/06/22/digitallogic/" title="《数字逻辑电路》期末复习"><img src="../images/cover40.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="《数字逻辑电路》期末复习"/></a><div class="content"><a class="title" href="../2024/06/22/digitallogic/" title="《数字逻辑电路》期末复习">《数字逻辑电路》期末复习</a><time datetime="2024-06-22T14:24:52.000Z" title="发表于 2024-06-22 22:24:52">2024-06-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/06/17/networks/" title="《计算机网络原理》期末复习"><img src="../images/cover39.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="《计算机网络原理》期末复习"/></a><div class="content"><a class="title" href="../2024/06/17/networks/" title="《计算机网络原理》期末复习">《计算机网络原理》期末复习</a><time datetime="2024-06-17T09:27:23.000Z" title="发表于 2024-06-17 17:27:23">2024-06-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/02/27/moyu7/" title="Sheetaの摸鱼日记（七）"><img src="../images/cover38.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="Sheetaの摸鱼日记（七）"/></a><div class="content"><a class="title" href="../2024/02/27/moyu7/" title="Sheetaの摸鱼日记（七）">Sheetaの摸鱼日记（七）</a><time datetime="2024-02-27T02:30:03.000Z" title="发表于 2024-02-27 10:30:03">2024-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2023/11/12/repo/" title="戏剧是自由的·看剧回忆录"><img src="../images/cover37.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="戏剧是自由的·看剧回忆录"/></a><div class="content"><a class="title" href="../2023/11/12/repo/" title="戏剧是自由的·看剧回忆录">戏剧是自由的·看剧回忆录</a><time datetime="2023-11-12T07:30:23.000Z" title="发表于 2023-11-12 15:30:23">2023-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Sheeta Liu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;" ></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/js/fireworks.js"></script>
+<% } %></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="../../../../js/utils.js"></script><script src="../../../../js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="../../../../js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-lake-alpha-67.vercel.app',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-lake-alpha-67.vercel.app',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"left","width":150,"height":300,"hOffset":20,"vOffset":-90},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.3,"opacityOnHover":0.3,"opacity":0.95},"log":false});</script></body></html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>《数字逻辑电路》期末复习 | 等到天亮我们都寻找到最漂亮的愿望</title><meta name="keywords" content="notes"><meta name="author" content="Sheeta Liu"><meta name="copyright" content="Sheeta Liu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="你才全加器，你全家都全加器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《数字逻辑电路》期末复习">
+<meta property="og:url" content="http://liuydd.github.io/2024/06/22/digitallogic/index.html">
+<meta property="og:site_name" content="等到天亮我们都寻找到最漂亮的愿望">
+<meta property="og:description" content="你才全加器，你全家都全加器">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://liuydd.github.io/images/cover40.jpg">
+<meta property="article:published_time" content="2024-06-22T14:24:52.000Z">
+<meta property="article:modified_time" content="2024-06-22T14:44:57.793Z">
+<meta property="article:author" content="Sheeta Liu">
+<meta property="article:tag" content="notes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://liuydd.github.io/images/cover40.jpg"><link rel="shortcut icon" href="../../../../img/tubiao.jpg"><link rel="canonical" href="http://liuydd.github.io/2024/06/22/digitallogic/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="../../../../css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '《数字逻辑电路》期末复习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-22 22:44:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3870185_ugzi44wm6l.css"><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="atom.xml" title="等到天亮我们都寻找到最漂亮的愿望" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="../img/touxiang2.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="../tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.html"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('../../../../images/cover40.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="../index.html">等到天亮我们都寻找到最漂亮的愿望</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.html"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《数字逻辑电路》期末复习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-22T14:24:52.000Z" title="发表于 2024-06-22 22:24:52">2024-06-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-22T14:44:57.793Z" title="更新于 2024-06-22 22:44:57">2024-06-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="../../../../categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>20分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《数字逻辑电路》期末复习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Readme"><a href="#Readme" class="headerlink" title="Readme"></a>Readme</h1><p><a target="_blank" rel="noopener" href="https://ur2x4vqise.feishu.cn/docx/EYqcdc1g1oCJJMxL4YHc4Sxznmf?from=from_copylink">这是我的数电笔记</a></p>
+<p>部分参考了<a target="_blank" rel="noopener" href="https://leverimmy.top/2024/02/26/Shuziluoji-Yu-Shuzijichengdianlu/">Clever Jimmy的笔记</a></p>
+<p>数电基本不考细节，考熟练度，考前我十分担心能否写完😥</p>
+<p>感觉考试题还是比平时作业简单一点点，也或许是有了一遍复习的buff加成，对知识点以及做题技巧更加熟悉</p>
+<p>2023年期末考了全加器的画法，2024年期末居然又考了全加器的画法，而我完全没怎么准备这方面的内容……</p>
+<p>不管怎样，应该比我之前设想的刚刚及格或者甚至会挂科的结果要好一点点吧…</p>
+<h2 id="第1章-数码与编码"><a href="#第1章-数码与编码" class="headerlink" title="第1章 数码与编码"></a>第1章 数码与编码</h2><h3 id="Tips："><a href="#Tips：" class="headerlink" title="Tips："></a>Tips：</h3><ol>
+<li>余三码（形式上）&#x3D; 8421码 + (0011)_2，实际上值与8421码一样。如十进制数1用8421码表示：0001，用余三码表示：0100</li>
+<li>两个余三码相加，若没有进位（即和≤9），则相加后的数要减3。若有进位，则相加后的数要加3.进位指超过了4位数，比如相加后由4位变成了5位数</li>
+<li>由8421码转换为格雷码：</li>
+</ol>
+<h2 id="第2章-逻辑代数及逻辑函数的化简"><a href="#第2章-逻辑代数及逻辑函数的化简" class="headerlink" title="第2章 逻辑代数及逻辑函数的化简"></a>第2章 逻辑代数及逻辑函数的化简</h2><h3 id="2-1-公式法化简"><a href="#2-1-公式法化简" class="headerlink" title="2.1 公式法化简"></a>2.1 公式法化简</h3><h4 id="重要公式："><a href="#重要公式：" class="headerlink" title="重要公式："></a>重要公式：</h4><p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YTg0ZGNlNGQwNDIzYWY5ZGFjOWFiMzg3OTA5NzRjNmNfam81RUZxc3lta0JUcTZSMmZoQW0wUlhyemZhc0hwaWZfVG9rZW46SmpqQ2JUaXR3b2w0cUd4QTVsbWNIT3R0bnNjXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="Tips：-1"><a href="#Tips：-1" class="headerlink" title="Tips："></a>Tips：</h4><ol>
+<li>一般将其他形式的表达式转换为与或式，再进行化简。或与式可以先用对偶规则转换为与或式，化简后再用对偶规则转化为或与式。</li>
+<li>化简的要求：“与”项（即乘积项）的个数最少；在满足上述条件的情况下，每个乘积项的变量数最少。</li>
+<li>在公式法化简中，常出现循环对称式，而这种已是最简形式：<ol>
+<li><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YzYxNmMxZjk5MTgzYTM2MTMwODcwODUwOTc5MjEzOTBfWGJ1aTNOZEJycTJBU1I5c3RtS1FJR1dRV2ptTTZkcFdfVG9rZW46Vk9oZWJadHJ2b2hjd1F4QzZlTGNkMzFhbklmXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></li>
+</ol>
+</li>
+<li>8421码转为典型格雷码：</li>
+</ol>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NTczYzZjM2EyMmQxZTEyNTZiNzZlMzc2ZjQwYTc2MzlfSTVYRU16TE9ZdVdGRjR1ekdGT296RGhLRUIzak94OUZfVG9rZW46TEVDOWJ1ajNCb3ZYY2F4MVlob2NXVmxKbnNnXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h3 id="2-2-卡诺图化简"><a href="#2-2-卡诺图化简" class="headerlink" title="2.2 卡诺图化简"></a>2.2 卡诺图化简</h3><h4 id="卡诺图："><a href="#卡诺图：" class="headerlink" title="卡诺图："></a>卡诺图：</h4><p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NTZhMDI4NGVkMDZhMTlmZTA2Y2Y1NzRlYTM1ODJhMzlfd0d3eUdoV0RNWlNUYmdxM3gyaXJlU0RvOXpiZk1BUmxfVG9rZW46UU01ZGJ4eVpKb0RSSkN4aXk5cWNBSnRPbkxkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="卡诺图化简："><a href="#卡诺图化简：" class="headerlink" title="卡诺图化简："></a>卡诺图化简：</h4><ol>
+<li>画图</li>
+<li>填数：在函数最小项对应的小方块填1，其他填0</li>
+<li>合并：合并填1的小方块，两个方块消1个变量，4个方块消2个变量，8个方块消3个变量（4个小方块可以是田字格，也可以是长条）</li>
+<li>先大后小：先找大圈合并</li>
+<li>不要漏，不冗余：每一个最小项至少被合并包含过一次；<strong>每个合并的圈中，至少有一个1没有被圈过</strong>，否则这个圈就是多余的</li>
+</ol>
+<h4 id="卡诺图求反函数："><a href="#卡诺图求反函数：" class="headerlink" title="卡诺图求反函数："></a>卡诺图求反函数：</h4><p>改为合并填0的小方块即可</p>
+<p>卡诺图中根据0化简出的函数是原函数的反函数</p>
+<h4 id="包含无关项的逻辑函数的化简："><a href="#包含无关项的逻辑函数的化简：" class="headerlink" title="包含无关项的逻辑函数的化简："></a>包含无关项的逻辑函数的化简：</h4><p>无关项：这一部分最小项既可以取0，也可以取1</p>
+<p>合并的时候可以将某些无关项取为1来消除更多的变量</p>
+<p>这种情况下求函数的反函数的时候也可能将某些无关项取为0来消除更多的变量</p>
+<h4 id="Tips：-2"><a href="#Tips：-2" class="headerlink" title="Tips："></a>Tips：</h4><ol>
+<li>最小项是与项，如ABC，A为低位，C为高位</li>
+<li>对于所有的i，相同i的最大项与最小项互补，如M_i &#x3D; 非m_i，m_i &#x3D; 非M_i</li>
+<li>对于所有的i，所有m_i的和与所有M_i的积互为对偶式</li>
+<li>卡诺图用的是最小项。</li>
+<li>不是只有边上的方格可以和另一边的方格合并，事实上，只要两个对应的行或列的码只有一个数不一样即可（<strong>注意五变量卡诺图横列上的码的对称性</strong>）。如下面这幅图中绿色的和紫色的：<ol>
+<li><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDc0ZWExY2QyNmNlYWI3NTVmM2Q1NWQ0ZTUyMmRmZDBfYTZralRJZ2JkQnlXMGZ2Z3ZrM0tVend1bGpyaHNmbXBfVG9rZW46V0Jac2J1MlZmb0FSeE94dmhENmNsUXFQbk40XzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></li>
+</ol>
+</li>
+<li>四变量的卡诺图四个角上的数也可以成一个圈！</li>
+</ol>
+<h2 id="第3章-集成门电路与触发器"><a href="#第3章-集成门电路与触发器" class="headerlink" title="第3章 集成门电路与触发器"></a>第3章 集成门电路与触发器</h2><h3 id="3-1-门电路的基本知识"><a href="#3-1-门电路的基本知识" class="headerlink" title="3.1 门电路的基本知识"></a>3.1 门电路的基本知识</h3><p>略</p>
+<h3 id="3-2-TTL典型与非门电路结构"><a href="#3-2-TTL典型与非门电路结构" class="headerlink" title="3.2 TTL典型与非门电路结构"></a>3.2 TTL典型与非门电路结构</h3><p>不考</p>
+<h3 id="3-3-TTL与非门电路的外部特性与级连"><a href="#3-3-TTL与非门电路的外部特性与级连" class="headerlink" title="3.3 TTL与非门电路的外部特性与级连"></a>3.3 TTL与非门电路的外部特性与级连</h3><h4 id="3-3-1-与非门电路的外部特性"><a href="#3-3-1-与非门电路的外部特性" class="headerlink" title="3.3.1 与非门电路的外部特性"></a>3.3.1 与非门电路的外部特性</h4><p><strong>传输延迟</strong></p>
+<p>定义：从输入传输到输出所需要的时间</p>
+<p>最大和最小值的中间50%点作为时间参考点</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NzRjNGU1OGVkMzRlNDY5YzZmOTFiNGY1NTg0OTA4NDdfb0paZ3RYS1hheVdCSkpwSFEyM25lRFViOVhIOVJPZWhfVG9rZW46UmhxWmJ5MHY2b2dMaEF4bmlwVGNmMUtobkZkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><strong>转移特性</strong></p>
+<p>定义：门电路中输出电压随输入电压的变化特性</p>
+<p>在曲线上，VOUT急剧下降时的VIN称为阈值电压VT，或称门槛电压</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YTJiYmZhZjFiNmY4ZmNjNzdhNjNkNWRmMzI4N2Y1YzNfUzRtV05jMzFsRHBrOFkwcnpVRE42S2lFdzZRVDhIZjdfVG9rZW46WUUyU2JVY1kzbzdERFl4U3RZcGNibVVKblRoXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><strong>直流参数</strong></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmZiZWEwZjNjNmJiZDk0MWU5YmJjZWZjMzYxNDY4NjVfa1JBV3pvd1lHNzBuMTdWQ2R1YkxmR055VDFXaVlNaWpfVG9rZW46QVlVbGJ4dkJPb0VyN2F4R25FeWNtcmpjblViXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="3-3-2-与非门电路的级联"><a href="#3-3-2-与非门电路的级联" class="headerlink" title="3.3.2 与非门电路的级联"></a>3.3.2 与非门电路的级联</h4><p>门电路级联：前一个器件的输出是后一个器件的输入，后一个器件是前一个器件的负载，两者相互影响</p>
+<p>负载能力的计算（利用前一个器件的输出是后一个器件的输入即可）：</p>
+<p>I_{OH} &#x3D; N * I_{IH}</p>
+<p>I_{OL} &#x3D; N * I_{IL}</p>
+<p>当负载数量超过理论值时，门电路进入非正常工作状态。负载大于与非门承受能力时，低电平变高，高电平变低。</p>
+<h3 id="3-4-集电极开路（OC）与非门"><a href="#3-4-集电极开路（OC）与非门" class="headerlink" title="3.4 集电极开路（OC）与非门"></a>3.4 集电极开路（OC）与非门</h3><p><strong>线与：</strong>将两个及以上的输出直接连在一起</p>
+<p>普通与非门的输出不能直接线与在一起，因为 Totem 输出结构的电路，当一门电路的输出为H，另一为L时，有大电流从H端流向L端，电流太大，会烧坏与非门</p>
+<p>逻辑设计中遇到“线与”——&gt;使用集电极开路输出（OC）的门电路：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OGRlNTgyYTQ2YWEyYzQ5NjgxYjI3ODE1MGEyNDRjMzlfZmZXOXZ4b3dXUExIWFh4Y1luazBGa2o1NTJwbkZDSWpfVG9rZW46Sm43N2JFdElBb3hQS3N4Z0ZzMmNzaWRZbktkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>缺点：由于 OC 门输出不是 Totem 结构，电路的上升延迟很大。</p>
+<ul>
+<li>T5 退饱和很慢。</li>
+<li>对输出负载的充电电流只能通过外接的R_L来提供。因此，输出波形的上升沿时间很大。</li>
+<li>采用 OC 门只适合速度较慢的电路，对于速度要求较快（例如 CPU 的数据总线），就不能使用 OC 门。</li>
+</ul>
+<p><strong>OC 门不可以和普通与非门实现线与，因为OC门在某种状态下也会发送两个普通门接在一起的情况。</strong></p>
+<h3 id="3-5-三态门"><a href="#3-5-三态门" class="headerlink" title="3.5 三态门"></a>3.5 三态门</h3><p><strong>引入了高阻态Z</strong></p>
+<p>三态门电路既保留了 Totem 输出结构，又具有 OC 门输出可以“线与”的特点</p>
+<h4 id="两个三态门与总线相连（线与）"><a href="#两个三态门与总线相连（线与）" class="headerlink" title="两个三态门与总线相连（线与）"></a>两个三态门与总线相连（线与）</h4><p>若存在状态转换，则有一段时间两个三态门均位于高阻态。因为若这一小段时间两个三态门都位于正常态，则可能会有很大的电流从而破坏总线</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OWU1MTJlZmY3YzY2ZTdhYTg1NWU0ZmVhMjkyNTcxZTJfOFJsWllGQUFBSW5sYlNZREZUcVhYckVrMUdHSVJYMVdfVG9rZW46RHNibGJad2wyb01jRzN4MVBnWmNNWmFkbmtiXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="1位双向总线驱动器（收发器）"><a href="#1位双向总线驱动器（收发器）" class="headerlink" title="1位双向总线驱动器（收发器）"></a>1位双向总线驱动器（收发器）</h4><p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OWFjZmIyYjUzYzJlMmYyZWIyYmY3OTk1ZGM2MDdiYzhfVVkyWXVVcnZKeVFaNVBCNkVOd2VYMkcxUTZqVTNJM2JfVG9rZW46RXdTUmJIazdXb0FXNVR4akoxMmNPZ3IzbnhkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="4位双向总线驱动器"><a href="#4位双向总线驱动器" class="headerlink" title="4位双向总线驱动器"></a>4位双向总线驱动器</h4><p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NTFlM2Q5ZTc0OTJiM2U5YTczYjZjOGU5Zjk3OGUwZTRfUlcxWkJhcDNOSXpQbmVBdFREWGtyUHh1Umg2d3pneXhfVG9rZW46TXNZRWIzTjBBb2plSHR4aFdaTmNSSVBHbjBlXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="数据与电流"><a href="#数据与电流" class="headerlink" title="数据与电流"></a>数据与电流</h4><p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NTgzZDE1ODQ0Y2FjYTZhYWIyYzA0MzJjN2ZhN2M5ZjlfaXk4RUYxaTU2RkhUQ3NOWTB5TW1qZnJ6MXZNQmJxYWFfVG9rZW46VFlQemJuQm0xb01uUm14VmhXN2NENVVsbm1nXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><strong>整体的规律是：</strong></p>
+<ul>
+<li>首先判断哪个三态门是输入的工作端（正常态）</li>
+<li>然后判断总线是高电平还是低电平<ul>
+<li>如果是高电平（1态），除了正常态的输入的三态门，其余（包括高阻态）电流都朝外</li>
+<li>如果是低电平（0态），除了正常态的输入的三态门，其余（包括高阻态）电流都朝里</li>
+</ul>
+</li>
+<li>电流符号<ul>
+<li>输入端（指输入到总线的那端，它们是三态门的输出）<ul>
+<li>如果是正常态的三态门，则为I_{OH}或I_{OL} </li>
+<li>如果是高阻态的三态门，则为I_{OZ}</li>
+</ul>
+</li>
+<li>输出端<ul>
+<li>如果是正常态的三态门，则为I_{IH}或I_{IL} </li>
+<li>如果是高阻态的三态门，则为I_{IZ}</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h3><p><strong>环形振荡电路的工作原理：</strong></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=M2NkNjljNzk3OGYzZGIzMGQ0ZjcwYzNmYzNmMTUwMzlfSTBJSVREdU9VOEYzbWpyWUNCVUt2Y2tyaDdKa1I0T1BfVG9rZW46U3ZCNGJRb3ZwbzhYWTJ4b0l2U2NYZHZsbnJmXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h2 id="第4章-组合逻辑电路"><a href="#第4章-组合逻辑电路" class="headerlink" title="第4章 组合逻辑电路"></a>第4章 组合逻辑电路</h2><h3 id="4-1-译码器"><a href="#4-1-译码器" class="headerlink" title="4.1 译码器"></a>4.1 译码器</h3><p>因为译码器输出的数中只有一个为0，所以可以根据这个性质将译码器和其他器件的使能端连接起来</p>
+<h4 id="功能分类"><a href="#功能分类" class="headerlink" title="功能分类"></a>功能分类</h4><ul>
+<li>变量译码器：输入N位，输出2^N位</li>
+<li>码制译码器：如8421码变换为循环码等</li>
+<li>显示译码器：控制数码管显示</li>
+</ul>
+<h4 id="2-4变量译码器"><a href="#2-4变量译码器" class="headerlink" title="2-4变量译码器"></a>2-4变量译码器</h4><p>输入2位：A为低位，B为高位</p>
+<p>输出4位：Y_i &#x3D; 0，其余的为1 当且仅当 (BA)_2 &#x3D; i</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ODU0YzI3YTRhNjE0MDg1NmI1NDEwZWIyODQ2ODdlMWFfdU1PYnFxc0lGVzdLRjVGTnA4Y3lva0Zadk56bFo4TTBfVG9rZW46SUZBUmJvZTVGb0Z1ZFd4S285NGNodlk5blplXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>输入缓冲部分：可以给输入增加一个与非门来增加缓冲，这样使得对外的负载只有一个，减轻上一级电路的负担</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NjhhYjEzNDdhNDNjMTQwMDZiYWQ5MjAyZWRjMTM1OTRfamNUbTJHclJGRFd4NmNacFk0eXNkU21XckJIVWhuSVVfVG9rZW46RFpneWJscDBMb1lFM2x4enFPcWNiWllGbjllXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>使能端：</p>
+<p>当$$\overline{E}$$&#x3D; 0，译码器使能（正常输出），反之禁止（输出端全为1）</p>
+<p><strong>译码器使能端的作用：①灵活：用于扩展；②可靠：用于连通</strong></p>
+<p>作用一：用于多片扩展。</p>
+<ul>
+<li>例如用两片带使能端的2-4译码器组成3-8译码器</li>
+<li>用5片带使能端的2-4译码器组成4-16译码器（四片的输出为输出，还有一片的输出来控制其他四片译码器的输入使能端）</li>
+<li>32-2^32译码器怎么搭建：32片用来输出，8片用来控制使能端</li>
+</ul>
+<p>作用二：使能端用作选通</p>
+<p>针对门电路的传输延迟造成的竞争、冒险问题提出的</p>
+<ul>
+<li>尖峰：由于缓冲与非门有延迟</li>
+<li>零重叠：由于有延迟，会出现同时有两个输出端处于正常状态的情况</li>
+</ul>
+<p>如果输入端的两个信号不是同时来的，即存在便宜Skew，则会导致尖峰信号更宽</p>
+<p>可以用使能端消除延迟产生的尖峰和零重叠：加一个能覆盖输入变化的正脉冲，在输入变化期间强制输出均为1。</p>
+<p>作用三：用作数据分配器</p>
+<p>（？）</p>
+<h4 id="多级译码"><a href="#多级译码" class="headerlink" title="多级译码"></a>多级译码</h4><p>为了减少负载，如二级译码：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmUzNTc4Mjk5MzE1YzlmYTY3OGNjYTQwOTg5YTM3NWJfOXRUUTQ2bVY5czdUa2RFWks5bzluNjB6Z0tDcFVtMDVfVG9rZW46WDlvbGJCbTdab25NeTV4b1ZaVGM3TThabkFkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="码制译码器"><a href="#码制译码器" class="headerlink" title="码制译码器"></a>码制译码器</h4><p>定义：将一种编码转换为另一种编码的逻辑电路</p>
+<p>BCD编码：<strong>十进制数</strong>的二进制编码（将二进制码转为十进制码）</p>
+<ul>
+<li>不完全译码的BCD译码器<ul>
+<li>当ABCD &#x3D; 0101-1111时，Y_{0-9}均为任意值</li>
+<li>怎么由卡诺图得到Y_i的表达式：将i的位置填上1，其他非无关项的地方填上0</li>
+<li><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NjhhM2Q4NzAxN2ZjMmFjMDU5M2VjOTgzOGFlMTc3ZjNfYnpneXZTZmwzNlNmd0ZYU1dLZ05pRmI3bEFHOU1uWHpfVG9rZW46V2NiZ2JqWE1Fb0dDVkF4Y2lmMWMzTVJpbnplXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></li>
+</ul>
+</li>
+<li>完全译码的BCD译码器<ul>
+<li>前面的无关项改为1，即当ABCD为0101-1111时，Y_{0-9}均为1</li>
+<li>此时可以直接写表达式</li>
+</ul>
+</li>
+</ul>
+<h4 id="显示译码器"><a href="#显示译码器" class="headerlink" title="显示译码器"></a>显示译码器</h4><p>当a&#x3D;0时，a段亮；a&#x3D;1时，a段灭。其他段同理</p>
+<p>显示译码器本质上是一个 BCD 码到一个特殊的七进制数码管编码的码制译码器：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OWJjYmJmY2U0NWQ0NjJjYWVmNjlkNjQ3NzkwNTQ4OGRfTGt1RHZ6OHBXVk5jOXhQemQwM1NkV0trRG1kckwwb3lfVG9rZW46QU1INGJ2WXZRbzVRSFl4ZXEzaWNRWElDblNkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h3 id="4-2-数据选择器"><a href="#4-2-数据选择器" class="headerlink" title="4.2 数据选择器"></a>4.2 数据选择器</h3><p>定义：<strong>在选择控制的信号作用下</strong>，能从多个输入数据中选择一个或多个作为输出。</p>
+<h4 id="4选1数据选择器"><a href="#4选1数据选择器" class="headerlink" title="4选1数据选择器"></a>4选1数据选择器</h4><p>4输入，1输出，2个选择控制</p>
+<p>注意输出Y的表达式：$$Y&#x3D;\overline{S_0}\overline{S_1}D_0+S_0\overline{S_1}D_1+\overline{S_0}S_1D_2+S_0S_1D_3$$，通过与或表达式来表示选择</p>
+<h4 id="数据选择器的扩展"><a href="#数据选择器的扩展" class="headerlink" title="数据选择器的扩展"></a>数据选择器的扩展</h4><ol>
+<li>用双4选1选择器<strong>（无使能端）</strong>扩展成16选1选择器：</li>
+</ol>
+<p>上面两个双4选1选择器选了4个数出来，下面的双4选1选择器实际上只用了左边的部分，从上面选出的4个数中选出最终的那一个数：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTE1ZTM0ZTlmNjgyZDAwMTczNzYxYjQ3ZGIyNzVkNTJfTU13YWh6SUhlaldoZnprWFBnSFlTelBRR29nV0JxWGlfVG9rZW46TlJ4RmJHRzdibzdtbnJ4aGp4SGM3WkRVbm9nXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<ol>
+<li>用双4选1选择器<strong>（有使能端）</strong>扩展成16选1选择器：</li>
+</ol>
+<p>通过使能端直接从四个小的数据选择器中选了一个。再通过低位控制端选择最终的那个：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NzhjODQ5Y2U5M2RmNDc5ZTc3ZGMyMzk1NjI1ZmU3ZDlfUFlOTzV3UmQ5QnVuSFVuRUNXQnFvM2NEdTdLUDJwYW5fVG9rZW46WUVYQ2JKa1lSb1RCb254amJLZWNkZnpEblRnXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="译码器与数据选择器实现逻辑函数"><a href="#译码器与数据选择器实现逻辑函数" class="headerlink" title="译码器与数据选择器实现逻辑函数"></a>译码器与数据选择器实现逻辑函数</h4><ol>
+<li>用译码器实现</li>
+</ol>
+<p>译码器可以看作N个输入变量组成的$$2^N$$个最小项，然后从这些最小项中选择需要的用与非门等连接起来即可。如：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTllMDAxMGU2NDQyZjkwMzU1MGVjMmY2MTc0Nzc1YTRfb1VtSEtkTlIwd0YzZTlNSVdTenB3YlpWN2p1RTBJQnpfVG9rZW46SUVSaWJWSVZhb1FyUkp4dXl1WGNUT3JSblFiXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<ol>
+<li>用数据选择器实现</li>
+</ol>
+<p>利用卡诺图，看哪些最小项为1，哪些为0，然后通过两条总线输入输入端。如：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MDVmNDQwYzMyNTI2MDMyOWQyNjRkNzc4OTExOGZhMmRfMHFvaVZMdVdYYUZjcjZnYjc0NDFmRjNWZVg3TklGWTVfVG9rZW46R0Y0SmJFZnByb3ZrTGN4WkI5MGMzNGM5bkFkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>此外，8 选 1 数据选择器也可以实现 4 变量函数，四个变量，其中三个用在选择端，第 4 个变量放在数据输入端。将输入端变量的值代入原式，看需要输入的D_i到底是什么。如：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmQ1MTM5ZGY2YWUzNTI3NGJhZGJlZTE4YzA4ZTAxOTVfS1JBblpsS0VueWdLN0t5NUpQYldMRlU5dVEycFo2Y1lfVG9rZW46TDlqRGJaYWhZb0VsWXp4QllZRGMyRTVBblFiXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h3 id="4-3-编码器"><a href="#4-3-编码器" class="headerlink" title="4.3 编码器"></a>4.3 编码器</h3><p>功能：将译码器反过来，对应输入的每一个状态，输出一个编码</p>
+<p>常用编码器：</p>
+<ul>
+<li>4-2编码：将输入的 4 个状态，编成 2 位二进制数码</li>
+<li>8-3编码：将输入的 8 个状态，编成 3 位二进制数码</li>
+<li>BCD编码：将 10 个输入编成 BCD 码</li>
+</ul>
+<h4 id="4-2编码器"><a href="#4-2编码器" class="headerlink" title="4-2编码器"></a>4-2编码器</h4><h4 id="8421编码器"><a href="#8421编码器" class="headerlink" title="8421编码器"></a>8421编码器</h4><p>功能：将输入信号编码成8421码</p>
+<p>输入：X_0 - X_9</p>
+<p>输出：Y_0 - Y_3</p>
+<h4 id="8-3优先编码器"><a href="#8-3优先编码器" class="headerlink" title="8-3优先编码器"></a>8-3优先编码器</h4><p>上述编码器存在的问题：当I1和I2同时中断（同时为0），代入表达式得A0&#x3D;1, A1&#x3D;1。</p>
+<p>——&gt;只有在互斥输入时，才使用这种编码器。即在任一时刻所有输入线中最多只允许有一个为0（4-2 编码器）或1（8421 码编码器）</p>
+<p>——&gt;采用优先编码器</p>
+<p>定义：当两条或两条以上的线为0时，<strong>优先按照输入编号大的编码</strong>，称为优先编码器</p>
+<p>注意：输入为数字（按键），输出为A_0 A_1 A_2…，且输出是反码输出（所以扩展时如果禁止高位允许低位，则A_3 &#x3D; 1）</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NGIxMDJiZjhkNDhhOGNhM2IzOGJiZGE4MmRkZDdjYzZfWEZyakNBVjRXSGpsZGNBNWl0RXRoM25ZUFU3UjJPZ2FfVG9rZW46UG5sbGJuYUFib1pPeEx4QzljR2NIRURzbm9nXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>将8-3优先编码器扩展为16-4优先编码器：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NGMwN2M0MzlmNmFkZjNjMjM2Y2NlMjYyYjI3YTU3NzZfd1BFSVJLQUt2QVFPZVhXRkNRQ3Y5QkRRZ216OTlDb1JfVG9rZW46WkdwNWJ6Sjlnb2h1Y0x4d1JDNGNnWXd1bmZjXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>应用：</p>
+<ul>
+<li>设备按照优先等级编码，便于中断响应</li>
+<li>用于键盘输入的读取</li>
+</ul>
+<h3 id="4-4-数据比较器"><a href="#4-4-数据比较器" class="headerlink" title="4.4 数据比较器"></a>4.4 数据比较器</h3><p>功能：比较A B两数，判断A&gt;B、A&lt;B、A&#x3D;B</p>
+<p>从高位开始逐位比较</p>
+<p>输入：A和B的四位数字</p>
+<p>输出：三种情况（用0表示没发生，用1表示发生）A&gt;B A&lt;B A&#x3D;B</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OWU3YzZhZWE3OTUzOGNlYzNiNzlhZGMyNjYwNDNjM2FfYmpiQmVWSHJpT0RsUGZROE0yTjFmcVdhSXJMQzh1VVVfVG9rZW46WDNLNmI3a0kzb2J3am14U0ZyWWNuM2Q3bkZjXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NjhjYjg3NmM0YzBlYWU2MDBkYTRmNTIwZWM4YTQxNjdfbXVvY2NXV2xtRTdLUnZBczk1WTVYd2lhQjR3S1dDWXRfVG9rZW46T0N0NmJndEVhb3M2N2F4NG1USWNLZTVSbnRmXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>分段比较：分段比较是多片比较器构成更长位数的方法。比较器不仅输出比较结果，还要能接受其它片输出的结果。</p>
+<h3 id="4-5-奇偶校验器"><a href="#4-5-奇偶校验器" class="headerlink" title="4.5 奇偶校验器"></a>4.5 奇偶校验器</h3><p>奇偶校验器通过检测数据中包含奇数个1还是偶数个1，来检查数据传输后和数码记录中是否有错误的一种电路.</p>
+<p><strong>通过异或门构造！（也可以采用异或非门来简化线路和提高速度）</strong></p>
+<h3 id="4-7-运算器（算数逻辑单元ALU）"><a href="#4-7-运算器（算数逻辑单元ALU）" class="headerlink" title="4.7 运算器（算数逻辑单元ALU）"></a>4.7 运算器（算数逻辑单元ALU）</h3><h4 id="加法器"><a href="#加法器" class="headerlink" title="加法器"></a>加法器</h4><ol>
+<li>一位加法器</li>
+</ol>
+<p>一位半加器：不考虑低位进位输入和高位的进位输出</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWJjYWI1MWEwNjU3YzIzMmY5YmM5ZDdlZmE2OGNhYjZfV05ieTJ4NzJ5OHJDNGI2aHlvVHFCekZoOXhRU0N0UEZfVG9rZW46WGdPMWJlc0tLb0hMZlR4VWpWYmN0b081bjdjXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>一位全加器：将Xn、Yn以及低位进位$$C_{n-1}$$相加，并将进位输出$$C_{n}$$</p>
+<p><strong>四种形式的全加器：</strong></p>
+<p>A. 不化简，通过真值表“1”的行直接写出$$F_{n}$$和$$C_{n}$$的逻辑表达式，全为最小项，需要<strong>三级门延迟</strong></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MDI0N2ZmZTMzODQzNmMyN2ZmNTQzMzIzZmNkMDZiNzlfRTlVaDRqbUZ3TmdhSmYyckpHRDVMYXY1WktpTVg3ZzhfVG9rZW46S2FGWGJYMXJybzZqS3p4S1l4SGNqRDRDbm9lXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YmNiY2Y2ODA0ZDcxZDRmZmJlZjQyMjBkYTE4YTVkMWRfZ1pIWWFCQ3FPUjNHSkNacVZpWGxWcmNVZ3JhR0sxZUtfVG9rZW46SnR2MmJ4T0wybzRvMkx4RlozMWNLU0I2bmloXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>B. 通过真值表“0”的行直接写出$$\overline{F_n}$$和$$C_{n}$$的逻辑表达式，用卡诺图化简并得到$$\overline{C_n}$$的逻辑表达式，再求一次非得到$$F_{n}$$和$$C_{n}$$，均只用<strong>两级门延迟</strong></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OTY5NjFlZWRlYTE0ZGY5OWY0NDZiM2RkOGEzZjI2MGJfd25PcG9UeEVYN01laFZnWnRZVmp6ZFZiZzZ6Z3N5T0xfVG9rZW46VEdoTGJxMmV2b0g0cjN4emNSUWNBYlJEbmxOXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YjViZmYzYmQ0Y2VmYWZmNzliNmU3ZGRmY2M3NDExZjhfT25SalJFRzdUdWNZTFN2eVBZNVBqQTNZM0F4Tko4ZnlfVG9rZW46VXFUU2JVUVpZb2hIVFV4dTlacGN0UG9IblVkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>C和D都是分析规律，先按照上述方式写出$$C_{n}$$的化简式子，再用$$C_{n}$$来表示$$F_{n}$$：</p>
+<p>$$F_{n}$$为1的条件：</p>
+<ul>
+<li>$$Xn、Yn、C_{n-1}$$均为1</li>
+<li>或者，$$Xn、Yn、C_{n-1}$$至少有一个为1，且$$C_n$$为0</li>
+</ul>
+<p>C. $$F_{n}$$的形成需要三级门延迟，$$C_{n}$$的形成需要二级门延迟</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MTVhNTFjMzIyZjZjYjJiNTgxNmYyNWQ3M2MxZDk2NjdfWHk0VUgwSXVVN0NrcUxtcmRLSjhFcnJnUGxRT0l5d3dfVG9rZW46UWlvUmJDSjZib083cVh4MkFvUWNzWEpZbm1mXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OGY3NmI2YzM1YzBkZWQ3NjM5NWQ3NmQ1ODQ3ZmEyMGVfSjlKa2xvYk51QmdGVEpzZEVPSXNFaXh2ZWJjVzBjQ2lfVG9rZW46TWtYMGJBQkZ3b0d5dUl4QTZJd2NpRDl5blFkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>D. $$F_{n}$$的形成需要三级门延迟，$$C_{n}$$的形成需要二级门延迟（和C的区别是从0的那行写的，再求非）</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YjIyNzY2MjRlMTA1MzMyOGIzZDU3ZDY0NWUxZDczMzJfeVJFRUlqRGdaTFM5QjZRZWV5SzlCcmxPcXV3enZFMXBfVG9rZW46R25EMGJUcHRKb2FOa2d4eHZWa2N5YllPblVkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NmVlOTFiZGExMjI2NWY4ZjYyNTRiYTljM2EwYzgzODRfYWtPandZeXpBN3gzTkZGSU83OU9ZbDc1b2RHdUVPTnRfVG9rZW46SUdZVWJ0bWkxb1oycHp4YXZnVmNBdWt4blRnXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<ol>
+<li>四位串行进位加法器</li>
+</ol>
+<p>就是前一个一位全加器的进位输出是下一个全加器的低位输入</p>
+<table>
+<thead>
+<tr>
+<th>使用哪种一位全加器</th>
+<th>F4</th>
+<th>C4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(a)</td>
+<td>12</td>
+<td>12</td>
+</tr>
+<tr>
+<td>(b)</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr>
+<td>(c)</td>
+<td>9</td>
+<td>8</td>
+</tr>
+<tr>
+<td>(d)</td>
+<td>9</td>
+<td>8</td>
+</tr>
+</tbody></table>
+<p>(c)(d)交叉串联更快：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQyNmQ4ZTRlMmE0OTFiOWEyYjBlOWU4MGUyZTcyYjNfWElVVkw4cjhzNEhpM1lKQlNUS09YVjBVTVVuWTA3WjBfVG9rZW46Q1NXb2JpVUljbzl2a0l4dHpxR2N6S3BybldkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<ol>
+<li>四位并行加法器</li>
+</ol>
+<p>并行加法器（超前进位加法器）各位的进位不是由前一级全加器的进位输出来提供的，而是由专门的进位门来提供的。</p>
+<p>进位输入是由专门的“进位门”综合所有低位的加数、被加数及最低位进入输入（即C0）后提供的</p>
+<p>（这个好麻烦TT）</p>
+<p>引入进位传递函数$$P_i &#x3D; X_i + Y_i$$和进位产生函数$$G_i &#x3D; X_iY_i$$</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MzE4MmJkZWFkNmJmMmQzNjNlNzkxZmM5NGQ0ZWI2ZmFfT0NOSUprdFd2VXZwS1lINk50NVZoRjdzTVhIeFhDMW1fVG9rZW46QW5DSWJLcmE3b0N2NEt4YVJTdmNPcDJsbmJiXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>$$C_i$$的延迟级数与位数无关，都是2级（相对与0级的C0而言）</p>
+<p>$$F_i$$仅F1是2级，其余均为3级</p>
+<ol>
+<li>16位加法器</li>
+</ol>
+<p>A. 用4片四位并行加法器组成16位快速加法器</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YmViNTY0OGZmYmIyYWRlY2ZkNmRlZmI5YzMzMDI2MmRfWnpOZjgxMXZqTWVaVHpMdFM5MnN5RWozWXdhNEN0eWpfVG9rZW46QXB5bmJwSU96b3JxMXJ4cW1oMWNETG1wbmRnXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>B. 16位并行进位加法器</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NDIzMWNiMmExNThiMmMzZDBlMjI4NGMzYmZlMmY0MGFfYlVRNGFsT21OMlhVOHVmY2lqaHQ3VVFlN1FxVVZoUDVfVG9rZW46RklDUmJRODhGbzQwQmp4enlaT2NXczgxbnFoXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>四位并行加法器的输出提供$$P_m、G_m$$需要2级延迟，F需要3级延迟</p>
+<p>则产生$$C_4 C_8 C_{12} C_{16}$$的延迟各是3级（在P_m和G_m的基础上加了一个与或非门）</p>
+<p>F1-F4：3级</p>
+<p>F5-F8：6级</p>
+<p>F9-F12：9级</p>
+<p>F13-F16：12级</p>
+<h4 id="算术运算逻辑单元"><a href="#算术运算逻辑单元" class="headerlink" title="算术运算逻辑单元"></a>算术运算逻辑单元</h4><p>4位ALU的核心是4位并行加法器</p>
+<h2 id="第五章-同步时序电路"><a href="#第五章-同步时序电路" class="headerlink" title="第五章 同步时序电路"></a>第五章 同步时序电路</h2><h3 id="5-1-触发器"><a href="#5-1-触发器" class="headerlink" title="5.1 触发器"></a>5.1 触发器</h3><h4 id="基本R-S触发器"><a href="#基本R-S触发器" class="headerlink" title="基本R-S触发器"></a>基本R-S触发器</h4><p><strong>R对应Q，S对应Q非</strong></p>
+<p>R0 S1 Q1 置1（置位Set）</p>
+<p>R1 S0 Q0 置0（复位Reset）</p>
+<p>R1 S1 Q 保持</p>
+<p>R0 S0 Q1 Q非1 异常</p>
+<p><strong>RS由00变为11，Q和非Q下一状态不定</strong></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NzczMmJkNTIwMDliYzQ1ZDBkNGMwMGZkMTJiNGRjZTNfMExNcHdZRVZZVmdxb1FCbzAzeThCSkFPQm5hY3BaeWpfVG9rZW46S2VCN2JlcDFmb0RqUUN4T0lkdGNrclNxbmNmXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="电位触发方式的触发器"><a href="#电位触发方式的触发器" class="headerlink" title="电位触发方式的触发器"></a>电位触发方式的触发器</h4><ol>
+<li>电位型RS触发器</li>
+</ol>
+<p>在R-S基本触发器的基础上，对输入加以控制（增加控制端E）</p>
+<p>一、用或门增加控制端</p>
+<p><strong>R仍然对应Q，S仍然对应Q非</strong></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OGZjNjkyNjdkYjdhMmE5Njk0NTY3YzIzZmM4YTEyY2FfalR5RGRXendPcVBKMVdrdjZzbG1TZmNWN0czTXR4M0hfVG9rZW46UUdWbGJQR1FBbzh6YzF4OGZBdmNxdG1BbmRoXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>功能表除了增加E外没有变化</p>
+<p>二、用与非门增加控制端</p>
+<p><strong>R对应Q非，S对应Q</strong></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=OTEzZmI5MzU5Nzg5Zjc1NzRmODA0MTA5MmI2MTQ0NzFfWURuU3BmWXAzM1lJRTN3N2FHSWl4MWFFYnI3bFR3RnVfVG9rZW46RDRkd2JhNWVob21wYzl4RTVzUWN3NThlbmxjXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>功能表R0S0和R1S1的情况相对于原来的来说是相反的</p>
+<p>E&#x3D;0时，保持触发器稳定状态不被破坏</p>
+<p>但是在E&#x3D;1 R&#x3D;1 S&#x3D;1时，同样存在不定状态</p>
+<ol>
+<li>电位型D触发器（也叫锁存器）</li>
+</ol>
+<p>将RS的两个输入改成一个输入（这个输入用非门得到一个非的输入），并且将原来的两级与非门改成一级与或非门</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MjFjNDM5NzVmNzFhNzNmMzZmMjczZmM1YjdkNDIzYWRfN244YWdrSnpRenNjeElmWndjTERqSzBrNHQ0V2hTdFdfVG9rZW46S1NlSGJlOVlrb1ZtbHF4Smh4eGNaVTBUbkFiXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><strong>D对应Q非</strong></p>
+<p>E:1 D:1 则Q:D Q非:D非 置数（排除了RS&#x3D;00或11，消除了不定状态）</p>
+<p>E:0 D:any 则Q:Q Q非:Q非 保持</p>
+<h4 id="边沿触发方式的触发器"><a href="#边沿触发方式的触发器" class="headerlink" title="边沿触发方式的触发器"></a>边沿触发方式的触发器</h4><p>接收时钟脉冲CP某一跳变来到时，输出才变化为输入的值</p>
+<ol>
+<li>正边沿的D触发器：CP正跳变时，才接收输入数据</li>
+</ol>
+<p>时钟正边沿跳变后，在CP&#x3D;1时，输出的状态不受D变化的影响，正边沿触发器状态保持</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MGJjZTk3ZDA3YTE5YmY0NzYxZTE0MjYwNzY0ZGJkODlfVVBjMXFTZElycENEVzVyVkdNMVUzZUlnb1hUY2JsNTBfVG9rZW46Vm5UNWJsSDM1b1RQcG14ZXNYSmM2ZHA4bkxjXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NjE3MGFmNjA1Yzg5M2IzNzA2MjdlODljOWE4NTc2NmFfc1FRZlZVWlVyOTFNZlZRWHdNQzdJWmJ4Yms3eFRueGlfVG9rZW46R0h3SGJuYU84bzNoT2N4WVlGU2N5Y0xLbmhmXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<ol>
+<li>负边沿的JK触发器</li>
+</ol>
+<p>异步与时钟无关，同步与时钟有关</p>
+<p>负边沿J-K触发器是利用触发器内部门电路的延迟时间不同来实现负沿触发的</p>
+<p>需要满足t_{pd与非门} &gt; 2*t_{pd与或非门}</p>
+<p>J对应Q对应S_d非，K对应Q非对应R_d非</p>
+<p>当R_d非和S_d非均为1时，置数功能Q的输出与J的输入一致</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MDY2NGZhYTlkOGFkNDY2MmFkMDVkNjJiNWEwNzcyYmZfQXprRUVlZW5jM2h1RHRNanBKdklFNzJjNDFCeVFZaHFfVG9rZW46TXhWN2JJTmtHb0hKQ094ZVdRbGNvU3pLbmNlXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="T触发器"><a href="#T触发器" class="headerlink" title="T触发器"></a>T触发器</h4><p>不设置数据输入端，只要来一个时钟脉冲，触发器就翻转一次</p>
+<p>T触发器可由D触发器和J-K触发器等构成，一般是边沿触发器</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NDgzZjBlMDhhMjQ1ZTQ4YTdjNDVhOGNmMjUwYzlmZDlfVmZkcnJ2SnFUQU1NR3pFYXQySkNmVGdkVEcxaW1ZTTNfVG9rZW46QTlUc2JSOEhEbzBxSmJ4d3BHMmM5dEQ4blE1XzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="触发器的功能互换"><a href="#触发器的功能互换" class="headerlink" title="触发器的功能互换"></a>触发器的功能互换</h4><p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NmM4ODg5Y2RkYTU2OTdmYTUwNDA2YjJmZjAxODRlYzVfaG14anNEVkRwcDVMeXlWUExFU2NTWW15QVZhQW5WS3RfVG9rZW46UWg3cWJyakRKbzJVWW94NVVVV2M4ZVhVbmpjXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>方法：将类型A触发器转换为类型B触发器，即外部接口变为了类型B触发器的输入，所以<strong>需要用类型B触发器的输入表示类型A触发器的输入</strong>。利用卡诺图，变量为Q_n和类型B触发器的输入，填上的0&#x2F;1是Q_{n+1}的值，然后化简就可以得到用类型B触发器输入表示的Q_{n+1}的表达式，再找Q_{n+1}与类型A触发器输入的关系。</p>
+<h4 id="正边沿D触发器的开关特性"><a href="#正边沿D触发器的开关特性" class="headerlink" title="正边沿D触发器的开关特性"></a>正边沿D触发器的开关特性</h4><p>数据建立时间t_{su}</p>
+<p>数据保持时间t_{hold}</p>
+<p>传输延迟参数t_{pd}：从时钟的约定时钟跳变开始，到Q发生变化为止所需的平均延迟时间（必须在时钟的高电平期间）</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjQ1MGJmZjllOTVjZTNhM2NjMzJmZjUyYTc5MWZhZjVfRk9KOFJPUmwxZ3JYaGJxMjlZa0ZkWHZOcU5iY0xwUmNfVG9rZW46SGtEZ2IzZ1Qyb2xrbTZ4bU5uVGMzNjEzbnZZXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NTE5ZmIzNTM2MWRjYmY2ZmFmNzdhYzhkZmNmMDQ3ZDNfVUZQZzladlBCZXY1dnRmZEdJakY5aXB3R0drYmcxWnBfVG9rZW46TFhqYmJTZGRub2o1YWt4RnQ5cGNQd2tCbmhiXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>多个触发器组成的电路最高时钟频率：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=N2JhMDdmZjBmYTA1Y2IzMTg5NjcwNTFiMTY5NmQ2ZGRfRHl3bzQ2Q1Jqa2ZId2U0c2Jyd3hibHZxMWtwckdDU0lfVG9rZW46UEpRZGIyZXhab3FBUU94c2pOa2NDTU52bjZvXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h3 id="5-2-同步时序电路的分析与设计方法"><a href="#5-2-同步时序电路的分析与设计方法" class="headerlink" title="5.2 同步时序电路的分析与设计方法"></a>5.2 同步时序电路的分析与设计方法</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>功能表：输入输出的关系</li>
+<li>激励表：从现态$$Q_n$$转变到次态$$Q_{n+1}$$，对触发器激励的要求<strong>（激励，即输入）</strong></li>
+<li>状态表与状态图：反映<strong>输入与状态</strong>转换的关系（状态Q为节点，边上为输入的值）</li>
+<li>状态方程：<strong>状态转换</strong>的表达式（$$Q_{n+1}$$关于$$Q_n$$的表达式）</li>
+</ul>
+<h4 id="触发器的功能表、激励表、状态表、状态图与状态方程"><a href="#触发器的功能表、激励表、状态表、状态图与状态方程" class="headerlink" title="触发器的功能表、激励表、状态表、状态图与状态方程"></a>触发器的功能表、激励表、状态表、状态图与状态方程</h4><p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NDhjOTk2MjU2Y2M3ZmVlYWRhZTIwYmU2NGJiOTA2OTZfb1JBdXA0ZmJLYjAzNGdjTlN4a1ZxaG81UHVuU0EwQVZfVG9rZW46UDdRTmJrRm5Ib0wzTW54WmtmSGNhZ2RobjZnXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<h4 id="同步时序电路的分析"><a href="#同步时序电路的分析" class="headerlink" title="同步时序电路的分析"></a>同步时序电路的分析</h4><p>Tip: 一般使用了异或是用于加法器或者奇偶检测</p>
+<p>分析步骤：</p>
+<ul>
+<li>根据电路图列出触发器<strong>激励函数表达式和电路输出函数</strong>（分析由于触发器输入的变化而引起次态的变化以及输出的变化，所以必须要明确触发器的输入变化）；</li>
+<li>根据电路输入和触发器激励函数建立<strong>次态表达式和状态表</strong>（分析触发器状态的变化规律）；</li>
+<li>画出<strong>状态图和时序图</strong>（能够更直观分析状态的变化规律）；</li>
+<li>分析输出序列和输入序列的关系，说明时序电路的<strong>逻辑功能</strong>。</li>
+</ul>
+<p>即：</p>
+<ul>
+<li>写$$Q_{n+1}&#x3D;f(输入变量， Q_n)$$，$$Z&#x3D;f(输入变量， Q_n)$$</li>
+<li>写出状态表，横栏为：输入变量  $$Q_n$$| $$Q_{n+1}$$  Z （或者直接为$$Q_n$$| $$Q_{n+1}$$，这个常见于有多个触发器串联且有多个Q的情况）</li>
+<li>根据状态表画出状态图，边上数字的含义是：输入变量值的组合&#x2F;输出变量的值</li>
+<li>根据状态表和状态图画出时序图，其中一个时钟周期内变量的值是不变的。<strong>根据一个时钟周期内A B Q_n的值确定下一个时钟周期内Q_{n+1}的值和本时钟周期内Z的值</strong></li>
+</ul>
+<h4 id="同步时序电路的设计"><a href="#同步时序电路的设计" class="headerlink" title="同步时序电路的设计"></a>同步时序电路的设计</h4><p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2VhZjJhMDZkYjcxZmI1NTg1MjhjZjNlZWRkNjBjZjlfMDZTUGZYQ3hrWXRQS3NpMDdRdHo1ZE4wU2lUZVBtZ3lfVG9rZW46UUxkTmIyYWJtb2tTUFV4aVlVeWNoUGc5bndiXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>步骤：</p>
+<ul>
+<li>确定输入变量和输出变量，即上图中的X_i和Z_i</li>
+<li>作原始状态表：根据给定的电路设计条件构成原始状态表。</li>
+<li>状态化简：原始状态表通常不是最小化状态表，它一般包含多余的状态，因此要对原始状态表进行化简。<ul>
+<li>使用类似 DFA 最小化的方法进行化简</li>
+<li>定义对应输出不同的状态是可区分的</li>
+<li>然后检测后继是否为可区分的，来判断当前状态对是否是可区分的</li>
+</ul>
+</li>
+<li>状态分配：给简化后的状态用一个二进制数来编码。</li>
+<li>求出<strong>激励函数（即上图中记忆电路的输入）</strong>和<strong>输出函数（即上图中的Z_i）</strong>：根据选用的触发器激励表和电路的状态表，综合出电路中各个触发器的激励函数和电路的输出函数。（找出现态Q_n、输入变量X_i与激励函数如D_i和输出函数Z_i的真值关系）</li>
+<li>画逻辑图</li>
+</ul>
+<p><strong>求函数可以用卡诺图！填入的数是要求的变量在卡诺图横栏竖栏变量输入的情况下的输出情况</strong></p>
+<p>举例：</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=NGU0MGY2ODMzODQzMzFmYWVjNGFjODEzYzI3OWVmYTZfM1FtZVVYakNBbTd0SEtmWEJtZGFxWnJaN2RUY2luZUlfVG9rZW46RjhGM2JXUnNBb0FkUzF4ejVmNGNMdXltbkRiXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>这个表中X是输入变量，Z是输出变量。Q_{2n}、Q_{1n}的值以及到Q_{2n+1}、Q_{1n+1}的转换是根据第三步第四步来的。激励函数是J_2 K_2 J_1 K_1，它们的值是根据Q_n到Q_{n+1}的转换而来的（借助JK触发器的激励表）。然后求J_i、K_i、Z关于X、Q_2n、Q_1n的逻辑函数可以利用观察法或者卡诺图</p>
+<h3 id="5-3-计数器"><a href="#5-3-计数器" class="headerlink" title="5.3 计数器"></a>5.3 计数器</h3><h4 id="D-触发器实现的-4-位二进制计数器"><a href="#D-触发器实现的-4-位二进制计数器" class="headerlink" title="D 触发器实现的 4 位二进制计数器"></a>D 触发器实现的 4 位二进制计数器</h4><h4 id="J-K-触发器实现的-4-位二进制计数器"><a href="#J-K-触发器实现的-4-位二进制计数器" class="headerlink" title="J-K 触发器实现的 4 位二进制计数器"></a>J-K 触发器实现的 4 位二进制计数器</h4><h4 id="可逆计数器"><a href="#可逆计数器" class="headerlink" title="可逆计数器"></a>可逆计数器</h4><p>主要增加了进位&#x2F;借位信号Z：</p>
+<p>X&#x3D;1，正向技术，计满1111时，进位Z&#x3D;1</p>
+<p>X&#x3D;0，逆向计数，计满0000时，借位Z&#x3D;1</p>
+<p>基本结构为$$Q_1 &#x3D; XF^- + \overline{X}F^+$$</p>
+<h4 id="集成化的-4-位二进制计数器"><a href="#集成化的-4-位二进制计数器" class="headerlink" title="集成化的 4 位二进制计数器"></a>集成化的 4 位二进制计数器</h4><p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MGQ0Nzg3Yzg4ZWFmMGNjOWYwMjkzY2EwZjE2ZTY3ZGJfc1FlZnMwdWdXR3BaOWtNUU02eVZ0MHZPS0RtUW5jNUxfVG9rZW46WUJ2WGJwdGNEb3hXZFN4VE9UR2NqOUlybjNkXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>用负边沿 D 触发器构成的 4 位二进制计数器：</p>
+<p>懒得整理了，直接照搬 </p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=M2ExMTY2ZDhkYzQzOTU5NGRjYmE5MmMyYzZmNWQxNGVfVnVOMWVIdWt5dGZ3VXluYlNJMlBSdTU0MHdrYUdEVGRfVG9rZW46QWJJcmJNT0Ztb1l2cUp4ZUR2SmNYRzFBbmRiXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<ul>
+<li>CLK</li>
+</ul>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWRmNDE4ZGZmNTdlOTJhMGM5MGZkZGQzNzBjYmUyODdfQ0VLemZ2TWlQRlVpRmkybk9JTDhJdlBsME0ybGlESFVfVG9rZW46Q1V3MGJkaUlrb3JIb1F4ZWpDemN4Mzg2bmJmXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<ul>
+<li>L</li>
+</ul>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=YmRiM2U1MTliNjgxNThlNGE2YWEzM2E4ZTFlOGZiM2JfaG9OTUt5WXNDUnQ5YUJsWXlQQnJqc01TUDlKM0JKdW1fVG9rZW46WG9FYWJvbXFLb3dzbFB4WWxTS2NpVjNDbnJoXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<ul>
+<li>T</li>
+</ul>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MWU0MWQzMGI3ZjlmM2U0ZWYxY2YyZDZkNjA0MDJmN2VfTmVXM25mTXM1cWtWbnpTU29na2d0cTYyMHU1QXpXNkZfVG9rZW46VXRTVmIwS3U4b3pzYk54WFZlM2NkMG12bkZlXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>此时的问题是片间进位信号是通过RC串行逐片传递的，这会导致计数频率不能很高</p>
+<ul>
+<li>P</li>
+</ul>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWQ4NWUzNzIzYTBiNDhmMDQwZDYxYjYwODYyNDZjOTNfaklxSk9ldG1ncGVmdFNtdGwzTzVZWkszU1NvN3Q3cGNfVG9rZW46UjdzNWJ5REZsbzhhdFV4TGljc2NXa3dIbmxjXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>此时的问题是最高位的 RC 为高电平并不表示整体进位！此时各个位的 RC 全部与起来，如果为高电平，才表示整体进位</p>
+<h4 id="设计计数器时要注意的问题"><a href="#设计计数器时要注意的问题" class="headerlink" title="设计计数器时要注意的问题"></a>设计计数器时要注意的问题</h4><p>若要将不能自启动的计数器改为可以自启动的计数器，可以修改计数循环之外的状态，让它们也进入计数循环</p>
+<h3 id="5-4-寄存器"><a href="#5-4-寄存器" class="headerlink" title="5.4 寄存器"></a>5.4 寄存器</h3><h2 id="第七章-可编程逻辑电路"><a href="#第七章-可编程逻辑电路" class="headerlink" title="第七章 可编程逻辑电路"></a>第七章 可编程逻辑电路</h2><h3 id="ROM"><a href="#ROM" class="headerlink" title="ROM"></a>ROM</h3><blockquote>
+<ul>
+<li>输入地址与存储信息一一对应</li>
+<li>与阵列是译码器，<strong>包括全部最小项</strong>，信息表完全</li>
+</ul>
+</blockquote>
+<p>存储体可以画为：或阵列</p>
+<p>地址译码：与阵列</p>
+<p><img src="https://ur2x4vqise.feishu.cn/space/api/box/stream/download/asynccode/?code=MjJhODc5Mjg2MDMyMWYxNzRmYzZiODQzODdhYTNiNWNfeVVZNEtCOUNJbHZqVEtIbHhJbXF2TWZ3Zk1aRjFzbXpfVG9rZW46SEF4UWJIQ3B0b2F2UWl4OVp6UGM1OHQ0bmdoXzE3MTkwNjczOTM6MTcxOTA3MDk5M19WNA" alt="img"></p>
+<p>与阵列固定（按照00，01，10，11这样的编码，因为实际上就是译码）</p>
+<p>或阵列可编程（要对着码表画，只画有1的地方）</p>
+<p>码表即输入输出对应的真值表</p>
+<h3 id="PLA"><a href="#PLA" class="headerlink" title="PLA"></a>PLA</h3><p>进行了逻辑压缩，与阵列不一定产生所有的最小项，只需产生逻辑函数所需的乘积项即可</p>
+<p><strong>所以与或阵列均可编程！</strong></p>
+<p>步骤：</p>
+<ol>
+<li>写出输出Gi基于输入Bi的逻辑表达式</li>
+<li>将表达式中每个不同的与项用乘积项Pi表示，这样就转化为Gi &#x3D; f(Pi)</li>
+<li>P项用与阵列实现，G项用或阵列实现</li>
+</ol>
+<p>PLA容量表示：（输入数2N）×（P项数）×（输出数M）</p>
+<h3 id="PAL"><a href="#PAL" class="headerlink" title="PAL"></a>PAL</h3><p><strong>与阵列可编程，或阵列固定</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://liuydd.github.io">Sheeta Liu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://liuydd.github.io/2024/06/22/digitallogic/">http://liuydd.github.io/2024/06/22/digitallogic/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://liuydd.github.io" target="_blank">等到天亮我们都寻找到最漂亮的愿望</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../../tags/notes/">notes</a></div><div class="post_share"><div class="social-share" data-image="../../../../images/cover40.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="../iai/"><img class="prev-cover" src="../../../../images/cover41.jpg" onerror="onerror=null;src='../../../../img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">《人工智能导论》期末复习</div></div></a></div><div class="next-post pull-right"><a href="../../17/networks/"><img class="next-cover" src="../../../../images/cover39.jpg" onerror="onerror=null;src='../../../../img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《计算机网络原理》期末复习</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="../iai/" title="《人工智能导论》期末复习"><img class="cover" src="../../../../images/cover41.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-06-22</div><div class="title">《人工智能导论》期末复习</div></div></a></div><div><a href="../../17/networks/" title="《计算机网络原理》期末复习"><img class="cover" src="../../../../images/cover39.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-06-17</div><div class="title">《计算机网络原理》期末复习</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="../img/touxiang2.jpg" onerror="this.onerror=null;this.src='../img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Sheeta Liu</div><div class="author-info__description">生活不需要意义，吃点好的，我也爱你</div></div><div class="card-info-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="../tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/liuydd"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">众生皆苦，唯有自渡...</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Readme"><span class="toc-number">1.</span> <span class="toc-text">Readme</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E6%95%B0%E7%A0%81%E4%B8%8E%E7%BC%96%E7%A0%81"><span class="toc-number">1.1.</span> <span class="toc-text">第1章 数码与编码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">Tips：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E9%80%BB%E8%BE%91%E4%BB%A3%E6%95%B0%E5%8F%8A%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%96%E7%AE%80"><span class="toc-number">1.2.</span> <span class="toc-text">第2章 逻辑代数及逻辑函数的化简</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%85%AC%E5%BC%8F%E6%B3%95%E5%8C%96%E7%AE%80"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 公式法化简</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E8%A6%81%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">重要公式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tips%EF%BC%9A-1"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">Tips：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8D%A1%E8%AF%BA%E5%9B%BE%E5%8C%96%E7%AE%80"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 卡诺图化简</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%A1%E8%AF%BA%E5%9B%BE%EF%BC%9A"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">卡诺图：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%A1%E8%AF%BA%E5%9B%BE%E5%8C%96%E7%AE%80%EF%BC%9A"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">卡诺图化简：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%A1%E8%AF%BA%E5%9B%BE%E6%B1%82%E5%8F%8D%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">卡诺图求反函数：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%85%E5%90%AB%E6%97%A0%E5%85%B3%E9%A1%B9%E7%9A%84%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%96%E7%AE%80%EF%BC%9A"><span class="toc-number">1.2.2.4.</span> <span class="toc-text">包含无关项的逻辑函数的化简：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tips%EF%BC%9A-2"><span class="toc-number">1.2.2.5.</span> <span class="toc-text">Tips：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E9%9B%86%E6%88%90%E9%97%A8%E7%94%B5%E8%B7%AF%E4%B8%8E%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">1.3.</span> <span class="toc-text">第3章 集成门电路与触发器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E9%97%A8%E7%94%B5%E8%B7%AF%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 门电路的基本知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-TTL%E5%85%B8%E5%9E%8B%E4%B8%8E%E9%9D%9E%E9%97%A8%E7%94%B5%E8%B7%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 TTL典型与非门电路结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-TTL%E4%B8%8E%E9%9D%9E%E9%97%A8%E7%94%B5%E8%B7%AF%E7%9A%84%E5%A4%96%E9%83%A8%E7%89%B9%E6%80%A7%E4%B8%8E%E7%BA%A7%E8%BF%9E"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 TTL与非门电路的外部特性与级连</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-1-%E4%B8%8E%E9%9D%9E%E9%97%A8%E7%94%B5%E8%B7%AF%E7%9A%84%E5%A4%96%E9%83%A8%E7%89%B9%E6%80%A7"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">3.3.1 与非门电路的外部特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-2-%E4%B8%8E%E9%9D%9E%E9%97%A8%E7%94%B5%E8%B7%AF%E7%9A%84%E7%BA%A7%E8%81%94"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">3.3.2 与非门电路的级联</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E9%9B%86%E7%94%B5%E6%9E%81%E5%BC%80%E8%B7%AF%EF%BC%88OC%EF%BC%89%E4%B8%8E%E9%9D%9E%E9%97%A8"><span class="toc-number">1.3.4.</span> <span class="toc-text">3.4 集电极开路（OC）与非门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E4%B8%89%E6%80%81%E9%97%A8"><span class="toc-number">1.3.5.</span> <span class="toc-text">3.5 三态门</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E4%B8%89%E6%80%81%E9%97%A8%E4%B8%8E%E6%80%BB%E7%BA%BF%E7%9B%B8%E8%BF%9E%EF%BC%88%E7%BA%BF%E4%B8%8E%EF%BC%89"><span class="toc-number">1.3.5.1.</span> <span class="toc-text">两个三态门与总线相连（线与）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E4%BD%8D%E5%8F%8C%E5%90%91%E6%80%BB%E7%BA%BF%E9%A9%B1%E5%8A%A8%E5%99%A8%EF%BC%88%E6%94%B6%E5%8F%91%E5%99%A8%EF%BC%89"><span class="toc-number">1.3.5.2.</span> <span class="toc-text">1位双向总线驱动器（收发器）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E4%BD%8D%E5%8F%8C%E5%90%91%E6%80%BB%E7%BA%BF%E9%A9%B1%E5%8A%A8%E5%99%A8"><span class="toc-number">1.3.5.3.</span> <span class="toc-text">4位双向总线驱动器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%B8%8E%E7%94%B5%E6%B5%81"><span class="toc-number">1.3.5.4.</span> <span class="toc-text">数据与电流</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips"><span class="toc-number">1.3.6.</span> <span class="toc-text">Tips:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF"><span class="toc-number">1.4.</span> <span class="toc-text">第4章 组合逻辑电路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E8%AF%91%E7%A0%81%E5%99%A8"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 译码器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E5%88%86%E7%B1%BB"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">功能分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4%E5%8F%98%E9%87%8F%E8%AF%91%E7%A0%81%E5%99%A8"><span class="toc-number">1.4.1.2.</span> <span class="toc-text">2-4变量译码器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%BA%A7%E8%AF%91%E7%A0%81"><span class="toc-number">1.4.1.3.</span> <span class="toc-text">多级译码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A0%81%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8"><span class="toc-number">1.4.1.4.</span> <span class="toc-text">码制译码器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E8%AF%91%E7%A0%81%E5%99%A8"><span class="toc-number">1.4.1.5.</span> <span class="toc-text">显示译码器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%95%B0%E6%8D%AE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 数据选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E9%80%891%E6%95%B0%E6%8D%AE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">4选1数据选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E6%89%A9%E5%B1%95"><span class="toc-number">1.4.2.2.</span> <span class="toc-text">数据选择器的扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%91%E7%A0%81%E5%99%A8%E4%B8%8E%E6%95%B0%E6%8D%AE%E9%80%89%E6%8B%A9%E5%99%A8%E5%AE%9E%E7%8E%B0%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.2.3.</span> <span class="toc-text">译码器与数据选择器实现逻辑函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E7%BC%96%E7%A0%81%E5%99%A8"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 编码器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2%E7%BC%96%E7%A0%81%E5%99%A8"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">4-2编码器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8421%E7%BC%96%E7%A0%81%E5%99%A8"><span class="toc-number">1.4.3.2.</span> <span class="toc-text">8421编码器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-3%E4%BC%98%E5%85%88%E7%BC%96%E7%A0%81%E5%99%A8"><span class="toc-number">1.4.3.3.</span> <span class="toc-text">8-3优先编码器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E6%95%B0%E6%8D%AE%E6%AF%94%E8%BE%83%E5%99%A8"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.4 数据比较器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-%E5%A5%87%E5%81%B6%E6%A0%A1%E9%AA%8C%E5%99%A8"><span class="toc-number">1.4.5.</span> <span class="toc-text">4.5 奇偶校验器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-7-%E8%BF%90%E7%AE%97%E5%99%A8%EF%BC%88%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU%EF%BC%89"><span class="toc-number">1.4.6.</span> <span class="toc-text">4.7 运算器（算数逻辑单元ALU）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E6%B3%95%E5%99%A8"><span class="toc-number">1.4.6.1.</span> <span class="toc-text">加法器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83"><span class="toc-number">1.4.6.2.</span> <span class="toc-text">算术运算逻辑单元</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%90%8C%E6%AD%A5%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF"><span class="toc-number">1.5.</span> <span class="toc-text">第五章 同步时序电路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1 触发器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%ACR-S%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">1.5.1.1.</span> <span class="toc-text">基本R-S触发器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%B5%E4%BD%8D%E8%A7%A6%E5%8F%91%E6%96%B9%E5%BC%8F%E7%9A%84%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">1.5.1.2.</span> <span class="toc-text">电位触发方式的触发器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%B9%E6%B2%BF%E8%A7%A6%E5%8F%91%E6%96%B9%E5%BC%8F%E7%9A%84%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">1.5.1.3.</span> <span class="toc-text">边沿触发方式的触发器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#T%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">1.5.1.4.</span> <span class="toc-text">T触发器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A6%E5%8F%91%E5%99%A8%E7%9A%84%E5%8A%9F%E8%83%BD%E4%BA%92%E6%8D%A2"><span class="toc-number">1.5.1.5.</span> <span class="toc-text">触发器的功能互换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E8%BE%B9%E6%B2%BFD%E8%A7%A6%E5%8F%91%E5%99%A8%E7%9A%84%E5%BC%80%E5%85%B3%E7%89%B9%E6%80%A7"><span class="toc-number">1.5.1.6.</span> <span class="toc-text">正边沿D触发器的开关特性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E5%90%8C%E6%AD%A5%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2 同步时序电路的分析与设计方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.5.2.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A6%E5%8F%91%E5%99%A8%E7%9A%84%E5%8A%9F%E8%83%BD%E8%A1%A8%E3%80%81%E6%BF%80%E5%8A%B1%E8%A1%A8%E3%80%81%E7%8A%B6%E6%80%81%E8%A1%A8%E3%80%81%E7%8A%B6%E6%80%81%E5%9B%BE%E4%B8%8E%E7%8A%B6%E6%80%81%E6%96%B9%E7%A8%8B"><span class="toc-number">1.5.2.2.</span> <span class="toc-text">触发器的功能表、激励表、状态表、状态图与状态方程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF%E7%9A%84%E5%88%86%E6%9E%90"><span class="toc-number">1.5.2.3.</span> <span class="toc-text">同步时序电路的分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.5.2.4.</span> <span class="toc-text">同步时序电路的设计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">1.5.3.</span> <span class="toc-text">5.3 计数器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#D-%E8%A7%A6%E5%8F%91%E5%99%A8%E5%AE%9E%E7%8E%B0%E7%9A%84-4-%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">1.5.3.1.</span> <span class="toc-text">D 触发器实现的 4 位二进制计数器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#J-K-%E8%A7%A6%E5%8F%91%E5%99%A8%E5%AE%9E%E7%8E%B0%E7%9A%84-4-%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">1.5.3.2.</span> <span class="toc-text">J-K 触发器实现的 4 位二进制计数器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E9%80%86%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">1.5.3.3.</span> <span class="toc-text">可逆计数器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E5%8C%96%E7%9A%84-4-%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">1.5.3.4.</span> <span class="toc-text">集成化的 4 位二进制计数器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E8%AE%A1%E6%95%B0%E5%99%A8%E6%97%B6%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.5.3.5.</span> <span class="toc-text">设计计数器时要注意的问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-number">1.5.4.</span> <span class="toc-text">5.4 寄存器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%8F%AF%E7%BC%96%E7%A8%8B%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF"><span class="toc-number">1.6.</span> <span class="toc-text">第七章 可编程逻辑电路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ROM"><span class="toc-number">1.6.1.</span> <span class="toc-text">ROM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PLA"><span class="toc-number">1.6.2.</span> <span class="toc-text">PLA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PAL"><span class="toc-number">1.6.3.</span> <span class="toc-text">PAL</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="../2024/06/22/iai/" title="《人工智能导论》期末复习"><img src="../images/cover41.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="《人工智能导论》期末复习"/></a><div class="content"><a class="title" href="../2024/06/22/iai/" title="《人工智能导论》期末复习">《人工智能导论》期末复习</a><time datetime="2024-06-22T14:25:02.000Z" title="发表于 2024-06-22 22:25:02">2024-06-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/06/22/digitallogic/" title="《数字逻辑电路》期末复习"><img src="../images/cover40.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="《数字逻辑电路》期末复习"/></a><div class="content"><a class="title" href="../2024/06/22/digitallogic/" title="《数字逻辑电路》期末复习">《数字逻辑电路》期末复习</a><time datetime="2024-06-22T14:24:52.000Z" title="发表于 2024-06-22 22:24:52">2024-06-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/06/17/networks/" title="《计算机网络原理》期末复习"><img src="../images/cover39.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="《计算机网络原理》期末复习"/></a><div class="content"><a class="title" href="../2024/06/17/networks/" title="《计算机网络原理》期末复习">《计算机网络原理》期末复习</a><time datetime="2024-06-17T09:27:23.000Z" title="发表于 2024-06-17 17:27:23">2024-06-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/02/27/moyu7/" title="Sheetaの摸鱼日记（七）"><img src="../images/cover38.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="Sheetaの摸鱼日记（七）"/></a><div class="content"><a class="title" href="../2024/02/27/moyu7/" title="Sheetaの摸鱼日记（七）">Sheetaの摸鱼日记（七）</a><time datetime="2024-02-27T02:30:03.000Z" title="发表于 2024-02-27 10:30:03">2024-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2023/11/12/repo/" title="戏剧是自由的·看剧回忆录"><img src="../images/cover37.jpg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="戏剧是自由的·看剧回忆录"/></a><div class="content"><a class="title" href="../2023/11/12/repo/" title="戏剧是自由的·看剧回忆录">戏剧是自由的·看剧回忆录</a><time datetime="2023-11-12T07:30:23.000Z" title="发表于 2023-11-12 15:30:23">2023-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Sheeta Liu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;" ></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/js/fireworks.js"></script>
+<% } %></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="../../../../js/utils.js"></script><script src="../../../../js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="../../../../js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-lake-alpha-67.vercel.app',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-lake-alpha-67.vercel.app',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"left","width":150,"height":300,"hOffset":20,"vOffset":-90},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.3,"opacityOnHover":0.3,"opacity":0.95},"log":false});</script></body></html>
